@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/24th.kokasai.com/static/css/main.f3369102.css",
-    "main.js": "/24th.kokasai.com/static/js/main.da488bd1.js",
+    "main.js": "/24th.kokasai.com/static/js/main.1e810808.js",
     "static/js/787.9862a9bc.chunk.js": "/24th.kokasai.com/static/js/787.9862a9bc.chunk.js",
     "index.html": "/24th.kokasai.com/index.html",
     "main.f3369102.css.map": "/24th.kokasai.com/static/css/main.f3369102.css.map",
-    "main.da488bd1.js.map": "/24th.kokasai.com/static/js/main.da488bd1.js.map",
+    "main.1e810808.js.map": "/24th.kokasai.com/static/js/main.1e810808.js.map",
     "787.9862a9bc.chunk.js.map": "/24th.kokasai.com/static/js/787.9862a9bc.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.f3369102.css",
-    "static/js/main.da488bd1.js"
+    "static/js/main.1e810808.js"
   ]
 }
