@@ -1,0 +1,25 @@
+{
+  "short_name": "第24回 工華祭",
+  "name": "第24回 工華祭",
+  "icons": [
+    {
+      "src": "24thKokasaiIcon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "24thKokasaiIcon.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "24thKokasaiIcon.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
