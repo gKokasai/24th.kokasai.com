@@ -173,13 +173,21 @@ function Project() {
   //borderの色を設定
   function setColor(target, galNum) {
 
-    const markColor = [
+    /*const markColor = [
       "#FF00F7",
       "#00CF0F",
       "#F7A030",
       "#D72070",
       "#FFDF00"
+    ];*/
+
+    const markColor = [
+      "#FF00F7",
+      "#F7FF00",
+      "#00F7FF",
+      "#00FF5D"
     ];
+
     /*
       ピンクborder-color: rgb(255, 0, 247);
       みどりborder-color: rgb(0, 207, 25);
@@ -188,7 +196,7 @@ function Project() {
       赤紫border-color: rgb(215, 32, 112);
     */
 
-    target.style.borderColor = markColor[galNum % 5];
+    target.style.borderColor = markColor[galNum % 4];
 
     /*
     if (1 <= galNum && galNum <= 5) {
