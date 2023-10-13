@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import "./homeStyle.css";
 import "../../css/pageStyle.css";
+import { Pages } from "../Pages";
 
 function Home() {
   //1度だけ実行
@@ -40,13 +41,14 @@ function Home() {
           <br />
           <p className="heading2">詳細情報</p>
           <p className="heading3">開催日時</p>
-          <p>一般公開</p>
           <p>11月4日(土) 9:30～16:30<br />
             11月5日(日) 9:30～16:30</p>
+            <p>＜今年度は一般公開となります＞</p>
 
           <p className="heading3">開催場所</p>
           <p>群馬工業高等専門学校</p>
           <p><a href="https://www.gunma-ct.ac.jp/" target="_blank" rel="noreferrer noopener">&gt;&gt;公式HPはこちら</a></p>
+          <p>来場方法については<a href={Pages.access.path}>アクセス</a>をご覧ください</p>
 
           <p className="heading3">注意事項</p>
           <p>酒類の持ち込みはご遠慮ください</p>
