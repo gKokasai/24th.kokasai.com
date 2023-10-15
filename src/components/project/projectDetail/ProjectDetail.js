@@ -16,12 +16,12 @@ function ProjectDetail() {
 
   //初期設定
   const firebaseConfig = {
-    apiKey: "AIzaSyDtOvDLeIPRmBtRRVRTFxvkWS3sZjSlCuo",
-    authDomain: "kokasaivotetest-1.firebaseapp.com",
-    projectId: "kokasaivotetest-1",
-    storageBucket: "kokasaivotetest-1.appspot.com",
-    messagingSenderId: "740547025901",
-    appId: "1:740547025901:web:1f23829c617c04886c25e4"
+    apiKey: "AIzaSyCcPN5IiEcM2ch-QELu33aa8GteM1IrV2k",
+    authDomain: "thkokasaivote-2.firebaseapp.com",
+    projectId: "thkokasaivote-2",
+    storageBucket: "thkokasaivote-2.appspot.com",
+    messagingSenderId: "670433461652",
+    appId: "1:670433461652:web:ab11aab773c1ec3bd1bb81"
   };
   firebase.initializeApp(firebaseConfig);
   const db = firebase.firestore();
