@@ -15,14 +15,14 @@ import "firebase/compat/firestore";
 function ProjectDetail() {
 
   //初期設定
-  const firebaseConfig = {
-    apiKey: "AIzaSyDiWKcCM1KcvsjsaX_67fBIOgDz02CndQk",
-    authDomain: "thkokasaivote.firebaseapp.com",
-    projectId: "thkokasaivote",
-    storageBucket: "thkokasaivote.appspot.com",
-    messagingSenderId: "1028666790202",
-    appId: "1:1028666790202:web:9bbcd5742a9a1b59d28003"
-  };
+const firebaseConfig = {
+  apiKey: "AIzaSyDtOvDLeIPRmBtRRVRTFxvkWS3sZjSlCuo",
+  authDomain: "kokasaivotetest-1.firebaseapp.com",
+  projectId: "kokasaivotetest-1",
+  storageBucket: "kokasaivotetest-1.appspot.com",
+  messagingSenderId: "740547025901",
+  appId: "1:740547025901:web:1f23829c617c04886c25e4"
+};
   firebase.initializeApp(firebaseConfig);
   const db = firebase.firestore();
 
