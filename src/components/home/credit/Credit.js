@@ -19,6 +19,7 @@ function Credit() {
           <p>ポスター：平川 大樹</p>
           <p>イラスト：奈良 凛心</p>
           <p>web開発：武藤 瑞生</p>
+          <br />
         </div>
       </div>
     </>
