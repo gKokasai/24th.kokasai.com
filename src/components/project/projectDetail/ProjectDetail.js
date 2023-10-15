@@ -15,14 +15,14 @@ import "firebase/compat/firestore";
 function ProjectDetail() {
 
   //初期設定
-const firebaseConfig = {
-  apiKey: "AIzaSyDtOvDLeIPRmBtRRVRTFxvkWS3sZjSlCuo",
-  authDomain: "kokasaivotetest-1.firebaseapp.com",
-  projectId: "kokasaivotetest-1",
-  storageBucket: "kokasaivotetest-1.appspot.com",
-  messagingSenderId: "740547025901",
-  appId: "1:740547025901:web:1f23829c617c04886c25e4"
-};
+  const firebaseConfig = {
+    apiKey: "AIzaSyDtOvDLeIPRmBtRRVRTFxvkWS3sZjSlCuo",
+    authDomain: "kokasaivotetest-1.firebaseapp.com",
+    projectId: "kokasaivotetest-1",
+    storageBucket: "kokasaivotetest-1.appspot.com",
+    messagingSenderId: "740547025901",
+    appId: "1:740547025901:web:1f23829c617c04886c25e4"
+  };
   firebase.initializeApp(firebaseConfig);
   const db = firebase.firestore();
 
@@ -208,57 +208,37 @@ const firebaseConfig = {
   }
 
   function recieveVoteData() {
-    var outputText = "";
 
-    for (let i = 1; i < projectData.length; i++) {
-      for (let j = 1; j < projectData[i].length; j++) {
-        let collection = db.collection(i + "-" + j);
-        collection.get().then(querySnapshot => {
-          const groupName = projectData[i][j].groupName;
-          outputText = groupName + " : " + querySnapshot.docs.length + "票";
+    let collection = db.collection(grd + "-" + cls);
+    collection.get().then(querySnapshot => {
 
-          let voteInfo = document.createElement("p");
-          let contents = document.getElementById("contents");
-          voteInfo.classList.add("voteInfo");
+      let isChecked = false;
+      querySnapshot.forEach(doc => {
+        if (doc.id == uid) {
+          isChecked = true;
+        }
+      });
 
-          if (outputText != "") {
-            voteInfo.innerText = outputText;
-          }
-          else {
-            voteInfo.innerText = "none";
-          }
-          //contents.appendChild(voteInfo);
-
-          if (i == grd && j == cls) {
-            let isChecked = false;
-            querySnapshot.forEach(doc => {
-              if (doc.id == uid) {
-                isChecked = true;
-              }
-            });
-
-            let niceButton = document.getElementById("niceButton");
-            let niceImage = document.getElementById("niceImage");
-            if (isChecked) {
-              niceButton.checked = true;
-              niceImage.src = `${process.env.PUBLIC_URL}/img/utility/heart2.png`;
-            }
-            else {
-              niceButton.checked = false;
-              niceImage.src = `${process.env.PUBLIC_URL}/img/utility/heart1.png`
-            }
-            niceButton.classList.remove("invisible");
-            niceImage.style.opacity = 50 + "%";
-            setTimeout(() => {
-              niceImage.style.opacity = 100 + "%";
-            }, cooltime);
-
-            let numberOfLikes = document.getElementById("numberOfLikes");
-            numberOfLikes.innerText = querySnapshot.docs.length;
-          }
-        });
+      let niceButton = document.getElementById("niceButton");
+      let niceImage = document.getElementById("niceImage");
+      if (isChecked) {
+        niceButton.checked = true;
+        niceImage.src = `${process.env.PUBLIC_URL}/img/utility/heart2.png`;
       }
-    }
+      else {
+        niceButton.checked = false;
+        niceImage.src = `${process.env.PUBLIC_URL}/img/utility/heart1.png`
+      }
+      niceButton.classList.remove("invisible");
+      niceImage.style.opacity = 50 + "%";
+      setTimeout(() => {
+        niceImage.style.opacity = 100 + "%";
+      }, cooltime);
+
+      let numberOfLikes = document.getElementById("numberOfLikes");
+      numberOfLikes.innerText = querySnapshot.docs.length;
+
+    });
 
   }
 
