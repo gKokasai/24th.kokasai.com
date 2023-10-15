@@ -1,7 +1,7 @@
 import "../homeStyle.css";
 import "../../../css/pageStyle.css";
 
-function Credit() {
+function Inquiry() {
   return (
     <>
       <div className="backGroundImage responsiveWidth">
@@ -14,15 +14,15 @@ function Credit() {
       <div className="contents contents_whitesmoke noPosterText">
         <div className="contents_innerBlock">
           <br />
-          <p className="heading2">ホームページ製作者</p>
-          <p>デザイン：本島 琉矢</p>
-          <p>ポスター：平川 大樹</p>
-          <p>イラスト：奈良 凛心</p>
-          <p>web開発：武藤 瑞生</p>
+          <p>第24回工華祭やこのホームページについてご不明な点やお気づきの点がございましたら、工華祭公式X(旧twitter)または下記フォームまでご連絡ください。</p>
+          <br />
+          <p><a href="https://twitter.com/nitgc_kokasai">工華祭公式X</a></p>
+          <p><a href="https://forms.office.com/r/4VwBRzEQuM">お問合せフォーム</a></p>
+          <br />
         </div>
       </div>
     </>
   );
 }
 
-export default Credit;
+export default Inquiry;

@@ -9,6 +9,7 @@ import Home from "./components/home/Home";
 import Map from "./components/map/Map";
 import Project from "./components/project/Project";
 import Credit from "./components/home/credit/Credit";
+import Inquiry from "./components/home/inquiry/Inquiry";
 import Apologize from "./components/home/apologize/Apologize";
 import ProjectDetail from "./components/project/projectDetail/ProjectDetail";
 import Page404 from "./components/home/page404/Page404";
@@ -32,7 +33,8 @@ function App() {
             <Route exact path={Pages.home.path} element={<Home />} />
             <Route exact path={Pages.map.path} element={<Apologize />} />
             <Route exact path={Pages.project.path} element={<Project />} />
-            <Route exact path={Pages.credit.path} element={<Apologize />} />
+            <Route exact path={Pages.credit.path} element={<Credit />} />
+            <Route exact path={Pages.inquiry.path} element={<Inquiry />} />
             <Route exact path={Pages.apologize.path} element={<Apologize />} />
             <Route exact path={Pages.projectDetail.path} element={<ProjectDetail />} />
             <Route exact path={Pages.page404.path} element={<Page404 />} />

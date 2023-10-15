@@ -28,6 +28,10 @@ export const Pages={
         displayName:"クレジット",
         path:"/credit",
     },
+    inquiry:{
+        displayName:"お問合せ",
+        path:"/inquiry",
+    },
     apologize:{
         displayName:"作成中",
         path:"/apologize",
