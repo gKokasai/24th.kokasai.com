@@ -13,7 +13,9 @@ function Footer() {
                 <p><a href={Pages.home.path} className="pathStyle">{Pages.home.displayName}</a></p>
                 <p><a href={Pages.map.path} className="pathStyle">{Pages.map.displayName}</a></p>
                 <p><a href={Pages.project.path} className="pathStyle">{Pages.project.displayName}</a></p>
+                <p className="heading3 textWhite">その他</p>
                 <p><a href={Pages.credit.path} className="pathStyle">{Pages.credit.displayName}</a></p>
+                <p><a href={Pages.inquiry.path} className="pathStyle">{Pages.inquiry.displayName}</a></p>
             </div>
             <div className="snsListArea">
                 <p className="heading3 textWhite">公式SNS</p>
