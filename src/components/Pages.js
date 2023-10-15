@@ -35,5 +35,9 @@ export const Pages={
     projectDetail:{
         displayName:"企画詳細",
         path:"/projectDetail",
+    },
+    page404:{
+        displayName:"404",
+        path:"*",
     }
 };

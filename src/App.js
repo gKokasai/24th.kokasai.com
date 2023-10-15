@@ -11,6 +11,7 @@ import Project from "./components/project/Project";
 import Credit from "./components/home/credit/Credit";
 import Apologize from "./components/home/apologize/Apologize";
 import ProjectDetail from "./components/project/projectDetail/ProjectDetail";
+import Page404 from "./components/home/page404/Page404";
 
 import './index.css';
 
@@ -34,6 +35,7 @@ function App() {
             <Route exact path={Pages.credit.path} element={<Apologize />} />
             <Route exact path={Pages.apologize.path} element={<Apologize />} />
             <Route exact path={Pages.projectDetail.path} element={<ProjectDetail />} />
+            <Route exact path={Pages.page404.path} element={<Page404 />} />
           </Routes>
         </BrowserRouter>
 
