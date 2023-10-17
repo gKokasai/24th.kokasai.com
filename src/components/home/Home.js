@@ -58,18 +58,22 @@ function Home() {
           <div className="portraitArea">
             <div className="portraitFrameTitleArea">
               <div className="portraitFrame">
-                <img className="portraitImage" src={`${process.env.PUBLIC_URL}/img/portrait/portrait_motojima.webp`} />
+                <img className="portraitImage" src={`${process.env.PUBLIC_URL}/img/portrait/portrait_mitani.webp`} />
               </div>
               <div className="portraitTitle">
-                <span>工華祭実行委員長<br />
-                  本島 琉矢<br />
-                  <span className="heading4">OPEN SESAME!!</span>
+                <span>学校長<br />
+                  三谷 卓也<br />
+                  <span className="heading4">第24回工華祭開催！</span>
                 </span>
               </div>
             </div>
             <div className="portraitTextArea">
               <div className="portraitText">
-                <p>　今回の工華祭のサブタイトルは、”OPEN SESAME”です。このフレーズは「アラビアンナイト」の一篇、「アリババと40人の盗賊」に出てくる呪文で、ほとんどの人が聞いたことがあると思います。物語の中では”OPEN SESAME”と唱えることで、岩の扉が開き、盗賊が隠した財宝が出てきます。これをコロナ規制が明けた今回工華祭と例え、このサブタイトルを付けました。今回の工華祭では、高専の魅力を色々な人に知ってもらいたいというモットーで運営しています。高専の魅力を色々な人に知ってもらい、さらには学生全員が楽しめるような工華祭にしたいと思っています。</p>
+                <p>　「OPEN SESAME」と呪文を唱え、扉を開けたら、いよいよ待ちに待った、しかも久しぶりの制限のない工華祭の開幕です！<br />
+                  　学生諸君に一言。<br />
+                  　祭りなんてものは、「楽しんだ者勝ち」です。準備の大変さ、本番の忙しさやワクワク感、そして後片付けでの寂寥感…。それらすべてを楽しみ尽くしてください。<br />
+                  　そして来校された皆様にも一言。<br />
+                  　ぜひ、学生達と一緒になってこの２年に１度のお祭りを盛り上げ、思う存分楽しんでいただければ幸いです。</p>
               </div>
             </div>
           </div>
@@ -96,30 +100,26 @@ function Home() {
           <div className="portraitArea">
             <div className="portraitFrameTitleArea">
               <div className="portraitFrame">
-                <img className="portraitImage" src={`${process.env.PUBLIC_URL}/img/portrait/portrait_mitani.webp`} />
+                <img className="portraitImage" src={`${process.env.PUBLIC_URL}/img/portrait/portrait_motojima.webp`} />
               </div>
               <div className="portraitTitle">
-                <span>学校長<br />
-                  三谷 卓也<br />
-                  <span className="heading4">第24回工華祭開催！</span>
+                <span>工華祭実行委員長<br />
+                  本島 琉矢<br />
+                  <span className="heading4">OPEN SESAME!!</span>
                 </span>
               </div>
             </div>
             <div className="portraitTextArea">
               <div className="portraitText">
-                <p>　「OPEN SESAME」と呪文を唱え、扉を開けたら、いよいよ待ちに待った、しかも久しぶりの制限のない工華祭の開幕です！<br />
-                  　学生諸君に一言。<br />
-                  　祭りなんてものは、「楽しんだ者勝ち」です。準備の大変さ、本番の忙しさやワクワク感、そして後片付けでの寂寥感…。それらすべてを楽しみ尽くしてください。<br />
-                  　そして来校された皆様にも一言。<br />
-                  　ぜひ、学生達と一緒になってこの２年に１度のお祭りを盛り上げ、思う存分楽しんでいただければ幸いです。</p>
+                <p>　今回の工華祭のサブタイトルは、”OPEN SESAME”です。このフレーズは「アラビアンナイト」の一篇、「アリババと40人の盗賊」に出てくる呪文で、ほとんどの人が聞いたことがあると思います。物語の中では”OPEN SESAME”と唱えることで、岩の扉が開き、盗賊が隠した財宝が出てきます。これをコロナ規制が明けた今回工華祭と例え、このサブタイトルを付けました。今回の工華祭では、高専の魅力を色々な人に知ってもらいたいというモットーで運営しています。高専の魅力を色々な人に知ってもらい、さらには学生全員が楽しめるような工華祭にしたいと思っています。</p>
               </div>
             </div>
           </div>
 
           <br />
           <br />
-        </div>
 
+        </div>
 
       </div>
     </>
