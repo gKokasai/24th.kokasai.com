@@ -229,14 +229,16 @@
 .leftButton{
     position: absolute;
     top: 16vh;
-    height: 8vh;
+    height: 16vh;
+    width: 8vh;
     left: 0%;
 }
 
 .rightButton{
     position: absolute;
     top: 16vh;
-    height: 8vh;
+    height: 16vh;
+    width: 8vh;
     right: 0%;
 }
 
