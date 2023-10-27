@@ -29,7 +29,7 @@ function App() {
         <BrowserRouter>
           <Routes>
             <Route exact path={Pages.access.path} element={<Access />} />
-            <Route exact path={Pages.event.path} element={<Apologize />} />
+            <Route exact path={Pages.event.path} element={<Event />} />
             <Route exact path={Pages.home.path} element={<Home />} />
             <Route exact path={Pages.map.path} element={<Apologize />} />
             <Route exact path={Pages.project.path} element={<Project />} />

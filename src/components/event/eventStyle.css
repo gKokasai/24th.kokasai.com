@@ -1,0 +1,465 @@
+.eventDescription {
+    padding: 0.2rem 0.5rem;
+    margin: 2.5rem 1rem;
+    background-color: rgb(181, 228, 89);
+    backdrop-filter: blur(5px);
+    box-shadow: 0px 0px 0px 10px rgb(181, 228, 89);
+    /*box-sizing: border-box;*/
+    border: dashed 2px rgb(133, 180, 3);
+    border-radius: 8px;
+    text-align: center;
+}
+
+/*.eventDescription {
+    padding: 0.2rem 0.5rem;
+    margin: 2.5rem 1rem;
+    background-color: rgb(191, 255, 63);
+    backdrop-filter: blur(5px);
+    box-shadow: 0px 0px 0px 10px rgb(191, 255, 63);
+    box-sizing: border-box;
+    border: dashed 2px rgb(151, 207, 0);
+    border-radius: 8px;
+    text-align: center;
+}*/
+
+
+.dayButton {
+    display: none;
+}
+
+.dayButtonTouchArea {
+    position: absolute;
+    width: 11rem;
+    height: 3rem;
+    border-radius: 0.5rem;
+    /*background-color: rgba(127, 255, 212, 0.582);*/
+    z-index: 1000;
+    opacity: 0%;
+
+    -webkit-transform: translate(-50%, 0%);
+    transform: translate(-50%, 0%);
+    left: 50%;
+}
+
+.dayButtonDispBack {
+    position: absolute;
+    width: 11rem;
+    height: 3rem;
+    border-radius: 0.5rem;
+    background-color: rgba(191, 191, 191);
+    /*box-shadow:4px 0 4px -2px #333;*/
+    box-shadow:4px 4px 4px -2px #333 inset;
+    z-index: 0;
+
+    -webkit-transform: translate(-50%, 0%);
+    transform: translate(-50%, 0%);
+    left: 50%;
+}
+
+.dayButtonDisp {
+    position: relative;
+    background-color: rgb(255, 207, 55);
+    border-radius: 0.5rem;
+    width: 5rem;
+    height: 3rem;
+    margin-left: auto;
+    margin-right: auto;
+    left: -3rem;
+    z-index: 10;
+
+    transition-duration: 1s;
+}
+
+input[type="checkbox"]#dayButton:checked~.dayButtonDisp {
+    left: 3rem;
+}
+
+.dayButtonDispTextBox {
+    position: absolute;
+    width: 11rem;
+    height: 3rem;
+    text-align: center;
+
+    -webkit-transform: translate(-50%, 0%);
+    transform: translate(-50%, 0%);
+
+    left: 50%;
+    font-size: 1.6rem;
+
+    border: 3px solid rgb(0, 0, 0);
+    box-sizing: border-box;
+    border-radius: 0.5rem;
+    background-color: rgba(63, 63, 59, 0);
+    z-index: 100;
+}
+
+
+.dayButtonDispText {
+    position: relative;
+    width: max-content;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+}
+
+
+
+.timeScheduleArea {
+    width: 100%;
+    height: 66rem;
+}
+
+.timeScheduleArea_day1 {
+    position: absolute;
+    padding: 1rem 0rem;
+    border-radius: 0.0rem;
+    /*border: 8px double rgb(31, 31, 31);*/
+    /*box-sizing: border-box;*/
+    background-color: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(5px);
+    transition-duration: 1s;
+    width: 100%;
+    left: 0%;
+}
+
+input[type="checkbox"]#dayButton:checked~.timeScheduleArea_day1 {
+    left: -120%;
+}
+
+.timeScheduleArea_day2 {
+    position: absolute;
+    padding: 1rem 0rem;
+    border-radius: 0rem;
+    /*border: 8px double rgb(31, 31, 31);*/
+    /*box-sizing: border-box;*/
+    background-color: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(5px);
+    transition-duration: 1s;
+    width: 100%;
+    left: 120%;
+}
+
+input[type="checkbox"]#dayButton:checked~.timeScheduleArea_day2 {
+    left: 0%;
+}
+
+
+.textDescArea{
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    margin-bottom: 0rem;
+}
+
+.textDance{
+    position: relative;
+    backdrop-filter: blur(5px);
+    /*border-radius: 0.5rem;*/
+    /*border: 3px solid black;*/
+    background-color: #D169B5BF;
+    text-align: center;
+    margin: 0rem 0.2rem;
+    padding: 0.2rem 0.4rem;
+}
+
+.textBand{
+    position: relative;
+    backdrop-filter: blur(5px);
+    /*border-radius: 0.5rem;*/
+    /*border: 3px solid black;*/
+    background-color: #69B5D1BF;
+    text-align: center;
+    margin: 0rem 0.2rem;
+    padding: 0.2rem 0.4rem;
+}
+
+.textCoscon{
+    position: relative;
+    backdrop-filter: blur(5px);
+    /*border-radius: 0.5rem;*/
+    /*border: 3px solid black;*/
+    background-color: #B5D169BF;
+    text-align: center;
+    margin: 0rem 0.2rem;
+    padding: 0.2rem 0.4rem;
+}
+
+
+
+
+.TSContent {
+    position: relative;
+    line-height: 0rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 0.1rem;
+    padding-bottom: 0.6rem;
+    /*padding: 0.1rem 1rem;*/
+    margin: 0.25rem auto;
+    background-color: rgba(255, 255, 255, 0.5);
+    /*backdrop-filter: blur(5px);*/
+    /*border-radius: 0.5rem;*/
+    /*border: 3px solid black;*/
+    opacity: 0%;
+    width: 85%;
+
+    transition-duration: 1s;
+
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes TSContent_fadeIn {
+    0% {
+        opacity: 0%;
+    }
+
+    100% {
+        opacity: 100%;
+    }
+}
+
+.TSProjectType{
+    text-align: left;
+}
+
+.TSGroupName{
+    text-align: center;
+    line-height: 1.5rem;
+    font-weight: bold;
+    /*padding-left: 0.5rem;*/
+}
+
+.TSPerformanceTime{
+    text-align: center;
+    line-height: 0rem;
+    /*padding-left: 0.5rem;*/
+}
+
+
+.bandCCArea {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    background-color: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(5px);
+}
+
+.bandCCContent {
+    position: relative;
+    display: inline-block;
+    aspect-ratio: 1/2;
+    width: 50%;
+    /*background-color: rgb(0, 0, 0);*/
+    /*box-sizing: border-box;*/
+    /*border: solid 2px 2px 0px 2px rgb(0, 255, 255);*/
+}
+
+.bandCCImageArea {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    aspect-ratio: 1/1;
+    width: 100%;
+}
+
+.bandCCGroupImage {
+    position: relative;
+    top: 3%;
+    left: 3%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 94%;
+    /*box-shadow: 0px 4px 4px rgba(255, 255, 255, 0.3);*/
+    filter: brightness(0%);
+
+    animation-delay: 0s;
+    animation-duration: 1s;
+    /*animation-name: bandCCGroupImageAnimation;*/
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes bandCCGroupImageAnimation {
+    100% {
+        filter: brightness(100%);
+    }
+}
+
+.bandCCGroupName {
+    position: relative;
+    color: white;
+    opacity: 0%;
+    height: 4rem;
+    /*background-color: aliceblue;*/
+
+    animation-delay: 0s;
+    animation-duration: 0.5s;
+    /*animation-name: bandCCDescriptionAnimation;*/
+    animation-timing-function: step-end;
+    animation-fill-mode: forwards;
+}
+
+.bandCCsnsIcon {
+    position: relative;
+    width: 2rem;
+    filter: brightness(0%);
+
+    animation-delay: 0s;
+    animation-duration: 1s;
+    /*animation-name: bandCCGroupImageAnimation;*/
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+}
+
+.bandCCdescriptionArea {
+    position: absolute;
+    top: 50%;
+    padding-left: 0.5rem;
+    height: 50%;
+}
+
+@keyframes bandCCDescriptionAnimation {
+    0% {
+        opacity: 0%;
+    }
+    10% {
+        opacity: 100%;
+    }
+    20% {
+        opacity: 0%;
+    }
+    30% {
+        opacity: 100%;
+    }
+    40% {
+        opacity: 0%;
+    }
+    50% {
+        opacity: 100%;
+    }
+    60% {
+        opacity: 0%;
+    }
+    70% {
+        opacity: 100%;
+    }
+    100% {
+        opacity: 100%;
+    }
+}
+
+
+.danceCCArea {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    background-color: rgb(0, 0, 0);
+}
+
+.danceCCContent {
+    position: relative;
+    display: inline-block;
+    aspect-ratio: 1/2;
+    width: 50%;
+}
+
+.danceCCImageArea {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    aspect-ratio: 1/1;
+    width: 100%;
+}
+
+.danceCCGroupImage {
+    position: relative;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 94%;
+    top: 3%;
+    /*box-shadow: 0px 4px 4px rgba(255, 255, 255, 0.3);*/
+    filter: brightness(0%);
+
+    animation-delay: 0s;
+    animation-duration: 1s;
+    /*animation-name: danceCCGroupImageAnimation;*/
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes danceCCGroupImageAnimation {
+    100% {
+        filter: brightness(100%);
+    }
+}
+
+.danceCCGroupName {
+    position: relative;
+    color: white;
+    opacity: 0%;
+    height: 4rem;
+    /*background-color: aliceblue;*/
+
+    animation-delay: 0s;
+    animation-duration: 0.5s;
+    /*animation-name: danceCCDescriptionAnimation;*/
+    animation-timing-function: step-end;
+    animation-fill-mode: forwards;
+}
+
+.danceCCsnsIcon {
+    position: relative;
+    width: 2rem;
+    filter: brightness(0%);
+
+    animation-delay: 0s;
+    animation-duration: 1s;
+    /*animation-name: bandCCGroupImageAnimation;*/
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+}
+
+.danceCCdescriptionArea {
+    position: absolute;
+    top: 50%;
+    padding-left: 0.5rem;
+    height: 50%;
+}
+
+@keyframes danceCCDescriptionAnimation {
+    0% {
+        opacity: 0%;
+    }
+    10% {
+        opacity: 100%;
+    }
+    20% {
+        opacity: 0%;
+    }
+    30% {
+        opacity: 100%;
+    }
+    40% {
+        opacity: 0%;
+    }
+    50% {
+        opacity: 100%;
+    }
+    60% {
+        opacity: 0%;
+    }
+    70% {
+        opacity: 100%;
+    }
+    100% {
+        opacity: 100%;
+    }
+}

@@ -1,0 +1,156 @@
+[
+    "ステージ企画",
+    [
+        "1日目",
+        {
+            "groupName": "Art.Srv.",
+            "projectType": "バンド",
+            "performanceTime": "9:30~",
+            "imgPath": "./img/bandCircleCut/bcc1-1.jpg",
+            "SNSPath": "https://www.instagram.com/art_srv_"
+        },
+        {
+            "groupName": "Pebbles",
+            "projectType": "バンド",
+            "performanceTime": "10:00~",
+            "imgPath": "./img/bandCircleCut/bcc1-2.jpg",
+            "SNSPath": ""
+        },
+        {
+            "groupName": "USHY",
+            "projectType": "バンド",
+            "performanceTime": "10:30~",
+            "imgPath": "./img/bandCircleCut/bcc1-3.jpg",
+            "SNSPath": ""
+        },
+        {
+            "groupName": "歌と猫",
+            "projectType": "バンド",
+            "performanceTime": "11:00~",
+            "imgPath": "./img/bandCircleCut/bcc1-4.jpg",
+            "SNSPath": "https://www.instagram.com/song_and_cat"
+        },
+        {
+            "groupName": "寿司力学",
+            "projectType": "バンド",
+            "performanceTime": "11:30~",
+            "imgPath": "./img/bandCircleCut/bcc1-5.jpg",
+            "SNSPath": "https://www.instagram.com/sushi._.mechanics"
+        },
+        {
+            "groupName": "DOWNDRAFT",
+            "projectType": "バンド",
+            "performanceTime": "12:00~",
+            "imgPath": "./img/bandCircleCut/bcc1-6.jpg",
+            "SNSPath": "https://www.instagram.com/dowendraft"
+        },
+        {
+            "groupName": "シュレディンガーのねこ",
+            "projectType": "バンド",
+            "performanceTime": "12:30~",
+            "imgPath": "./img/bandCircleCut/bcc1-7.jpg",
+            "SNSPath": "https://www.instagram.com/shuredinga_noneko"
+        },
+        {
+            "groupName": "Thne braian earrings",
+            "projectType": "バンド",
+            "performanceTime": "13:00~",
+            "imgPath": "./img/bandCircleCut/bcc1-8.jpg",
+            "SNSPath": ""
+        },
+        {
+            "groupName": "ダンスの子",
+            "projectType": "ダンス愛好会",
+            "performanceTime": "14:30~15:00",
+            "imgPath": "./img/circleCut/cc11-2.jpg",
+            "SNSPath": "https://www.instagram.com/nitgc.dance_official"
+        },
+        {
+            "groupName": "コスプレコンテスト",
+            "projectType": "コスプレコンテスト",
+            "performanceTime": "15:30~16:00",
+            "imgPath": "",
+            "SNSPath": ""
+        }
+    ],
+    [
+        "2日目",
+        {
+            "groupName": "ダンスの子",
+            "projectType": "ダンス愛好会",
+            "performanceTime": "9:30~10:30",
+            "imgPath": "./img/circleCut/cc11-2.jpg",
+            "SNSPath": "https://www.instagram.com/nitgc.dance_official"
+        },
+        {
+            "groupName": "あらきのだんす。",
+            "projectType": "有志ダンス",
+            "performanceTime": "10:30~11:30",
+            "imgPath": "./img/bandCircleCut/bcc2-2.jpg",
+            "SNSPath": ""
+        },
+        {
+            "groupName": "勝手にアイドル部",
+            "projectType": "有志ダンス",
+            "performanceTime": "11:00~",
+            "imgPath": "./img/bandCircleCut/bcc2-3.jpg",
+            "SNSPath": "https://www.instagram.com/katteni_idol"
+        },
+        {
+            "groupName": "Rear Bumper",
+            "projectType": "バンド",
+            "performanceTime": "12:30~",
+            "imgPath": "./img/bandCircleCut/bcc2-4.jpg",
+            "SNSPath": ""
+        },
+        {
+            "groupName": "朝から晩までさてぃすふぁい",
+            "projectType": "バンド",
+            "performanceTime": "13:00~",
+            "imgPath": "./img/bandCircleCut/bcc2-5.jpg",
+            "SNSPath": ""
+        },
+        {
+            "groupName": "Independent cocoa",
+            "projectType": "バンド",
+            "performanceTime": "13:30~",
+            "imgPath": "./img/bandCircleCut/bcc2-6.jpg",
+            "SNSPath": "https://www.instagram.com/independentcocoa"
+        },
+        {
+            "groupName": "Bloom",
+            "projectType": "バンド",
+            "performanceTime": "14:00~",
+            "imgPath": "./img/bandCircleCut/bcc2-7.jpg",
+            "SNSPath": "https://www.instagram.com/bloom_stpr"
+        },
+        {
+            "groupName": "Twenty-Seven",
+            "projectType": "バンド",
+            "performanceTime": "14:30~",
+            "imgPath": "./img/bandCircleCut/bcc2-8.jpg",
+            "SNSPath": "https://www.instagram.com/twenty_seven808"
+        },
+        {
+            "groupName": "Melty Popo",
+            "projectType": "バンド",
+            "performanceTime": "15:00~",
+            "imgPath": "./img/bandCircleCut/bcc2-9.jpg",
+            "SNSPath": ""
+        },
+        {
+            "groupName": "那由多",
+            "projectType": "バンド",
+            "performanceTime": "15:30~",
+            "imgPath": "./img/bandCircleCut/bcc2-10.jpg",
+            "SNSPath": ""
+        },
+        {
+            "groupName": "劇場版 青春がしたい平川【完結編】",
+            "projectType": "バンド",
+            "performanceTime": "16:00~",
+            "imgPath": "./img/bandCircleCut/bcc2-11.jpg",
+            "SNSPath": ""
+        }
+    ]
+]
