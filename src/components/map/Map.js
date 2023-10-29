@@ -119,11 +119,21 @@ function Map() {
         y: e.clientY
       };
 
-      mapPos.x += pos.x - prePos0.x;
-      mapPos.y += pos.y - prePos0.y;
+      let widthBorder=mapWidth*(1+mapSize/mapWidth);
+      console.log(widthBorder);
 
-      prePos0.x = pos.x;
-      prePos0.y = pos.y;
+      mapPos.x += pos.x - prePos0.x;
+      if (mapPos.x > 0) mapPos.x = 0;
+      else if(mapPos.x < -widthBorder) mapPos.x = -widthBorder;
+      else prePos0.x = pos.x;
+
+      mapPos.y += pos.y - prePos0.y;
+      if (mapPos.y > 0) mapPos.y = 0;
+      else if(mapPos.y < -widthBorder) mapPos.y = -widthBorder;
+      else prePos0.y = pos.y;
+
+      //prePos0.x = pos.x;
+      //prePos0.y = pos.y;
 
       setMapPos(mapPos.x, mapPos.y, mapSize);
     }
@@ -249,11 +259,12 @@ function Map() {
     <>
       <div id="mapCanvas" className="mapCanvas" ref={circleRef} onMouseDown={setPrePos_mouse} onMouseMove={scrollMap_mouse} onMouseUp={setEndPos_mosue} onMouseLeave={setEndPos_mosue}>
         <div id="mapMovingBox" className="mapMovingBox">
-          <img id="campusMap_1" className="campusMap_1" src={`${process.env.PUBLIC_URL}/img/map/campusMap_1.png`} />
+          <img id="mapBackImg" className="mapBackImg" src={`${process.env.PUBLIC_URL}/img/map/mapBack.jpg`} />
+          <img id="campusMap_1" className="campusMap_1" src={`${process.env.PUBLIC_URL}/img/map/campusMap_1.svg`} />
         </div>
       </div>
 
-      <img src={`${process.env.PUBLIC_URL}/img/backGround/fantasy.jpg`} className="backGroundImage responsiveWidth" />
+      <img src={`${process.env.PUBLIC_URL}/img/backGround/antique.jpg`} className="backGroundImage responsiveWidth" />
       <div className="contents">
         <div className="contents_innerBlock">
           <br />
