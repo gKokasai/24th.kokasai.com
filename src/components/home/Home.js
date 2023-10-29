@@ -43,15 +43,24 @@ function Home() {
           <p className="heading3">開催日時</p>
           <p>11月4日(土) 9:30～16:30<br />
             11月5日(日) 9:30～16:30</p>
-            <p>＜今年度は一般公開となります＞</p>
+          <p>＜今年度は一般公開となります＞</p>
+
 
           <p className="heading3">開催場所</p>
           <p>群馬工業高等専門学校</p>
           <p><a href="https://www.gunma-ct.ac.jp/" target="_blank" rel="noreferrer noopener">&gt;&gt;公式HPはこちら</a></p>
           <p>来場方法については<a href={Pages.access.path}>アクセス</a>をご覧ください</p>
 
+
           <p className="heading3">注意事項</p>
-          <p>酒類の持ち込みはご遠慮ください</p>
+          <ul className="ul_home">
+            <li className="li_home">マップに色で示された場所以外および工事場所への立ち入りは禁止されています</li>
+            <li className="li_home">ゴミは構内に設置されたゴミ箱に捨ててください<br />また、燃えるゴミ・燃えないゴミ・ペットボトルの分別にご協力ください</li>
+            <li className="li_home">構内は全面禁酒・禁煙となっております<br />酒類の持ち込みはご遠慮ください</li>
+            <li className="li_home">駐車場・駐輪場は指定の場所のみ利用可能です<br />学校周辺での道路上駐車は近隣の方々へのご迷惑となりますのでご遠慮ください<br />駐車場・駐輪場の場所についてはアクセスページをご覧ください</li>
+            <li className="li_home">駐車場・駐輪場を含む構内で発生した事故・盗難に関して本校は責任を負いかねますのでご了承ください</li>
+            <li className="li_home">落とし物をした場合または落とし物を拾った場合は、実行委員会本部までお越しください</li>
+          </ul>
 
           <p className="heading2">役員あいさつ</p>
 
