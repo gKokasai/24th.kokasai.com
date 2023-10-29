@@ -60,18 +60,18 @@
     position: relative;
     background-color: rgb(255, 207, 55);
     border-radius: 0.5rem;
-    width: 5rem;
+    width: 5.5rem;
     height: 3rem;
     margin-left: auto;
     margin-right: auto;
-    left: -3rem;
+    left: -2.75rem;
     z-index: 10;
 
     transition-duration: 1s;
 }
 
 input[type="checkbox"]#dayButton:checked~.dayButtonDisp {
-    left: 3rem;
+    left: 2.75rem;
 }
 
 .dayButtonDispTextBox {
