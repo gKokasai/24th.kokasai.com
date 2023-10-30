@@ -7,8 +7,6 @@ import { useEffect, useRef } from "react";
 import { useLocation } from "react-router-dom";
 
 function Project() {
-  //変更前の銀河の番号
-  var preGalNum = 1;
 
   //クエリを取得
   const quely = new URLSearchParams(useLocation().search);
@@ -16,6 +14,9 @@ function Project() {
   if (grd == null) grd = 1;
   if (grd == 0) grd = 1;
   if (projectData[grd] == undefined) grd = 1;
+
+  //変更前の銀河の番号
+  var preGalNum = grd;
 
 
   //1度だけ実行
