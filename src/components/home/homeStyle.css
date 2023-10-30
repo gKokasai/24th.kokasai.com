@@ -1,3 +1,12 @@
+.ul_home{
+    position: relative;
+    left: -1rem;
+}
+
+.li_home{
+    margin: 1rem 0rem;
+}
+
 .posterArea {
     position: relative;
     /*height: 100vh;*/

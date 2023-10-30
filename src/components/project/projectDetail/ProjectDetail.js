@@ -39,6 +39,12 @@ function ProjectDetail() {
   var cls = parseInt(quely.get("cls"));
   if (grd == null) grd = 1;
   if (cls == null) cls = 1;
+  if (grd == 0) grd = 1;
+  if (cls == 0) cls = 1;
+  if (projectData[grd] == undefined) {
+    grd = 1;
+    cls = 1;
+  }
   if (projectData[grd][cls] == undefined) {
     grd = 1;
     cls = 1;
