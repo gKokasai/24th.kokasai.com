@@ -5,22 +5,95 @@ import "./mapStyle.css";
 import projectData from "../../json/projectData.json";
 
 import { useEffect, useRef } from "react";
+import { useLocation } from "react-router-dom";
 
 function Map() {
+
+  //クエリを取得
+  const quely = new URLSearchParams(useLocation().search);
+  var grd = parseInt(quely.get("grd"));
+  var cls = parseInt(quely.get("cls"));
+  var isFocus = 1;
+  if (grd == null||cls == null){
+    grd=1;
+    cls=1;
+    isFocus=0;
+  }
+  if (grd == 0||cls == 0){
+    grd=1;
+    cls=1;
+    isFocus=0;
+  }
+  if (projectData[grd] == undefined) {
+    grd=1;
+    cls=1;
+    isFocus=0;
+  }
+  if (projectData[grd][cls] == undefined) {
+    grd=1;
+    cls=1;
+    isFocus=0;
+  }
+
+
+  //初期設定
   var prePos0 = { x: 0, y: 0 }; //指1本目
   var prePos1 = { x: 0, y: 0 }; //指2本目
   var preDis = 0; //指1本目と2本目の距離
   var preMidPos = { x: 0, y: 0 }; //指1本目と2本目の中間の座標
-  var mapPos = { x: 0, y: 0 };
+  var mapPos = { x: 0, y: 0 }; //マップの位置
   const mapWidth = 500; //画像によるので読み込めるようにする
   var mapSize = mapWidth;
   var isMouseDown = 0; //マウスが押されたか
-  const appearSize = 800; //アイコンの表示/非表示の境目のサイズ[px]
+  const appearSize = 700; //アイコンの表示/非表示の境目のサイズ[px]
+  const zoomLimit = 1500; //ズームの限界
+  const focusSize = 1000; //フォーカスした際のマップの初期サイズ
+
 
   //1度だけ実行
   useEffect(() => {
 
     createMapObjects();
+
+    //クエリで指定されている場合、その企画をフォーカス
+    if(isFocus==1){
+
+      mapSize=focusSize;
+
+      //%を数字に変換
+      let posNoPercent={
+        x:projectData[grd][cls].posLeft.replace(/[^0-9]/g, ''),
+        y:projectData[grd][cls].posTop.replace(/[^0-9]/g, '')
+      }
+      let posNum={
+        x:Number(posNoPercent.x),
+        y:Number(posNoPercent.y)
+      }
+      
+      let mapCanvas = document.getElementById("mapCanvas");
+      let widthBorder = mapSize - mapCanvas.clientWidth;
+
+      mapPos.x=mapCanvas.clientWidth/2-mapSize*posNum.x/100;
+      if (mapPos.x > 0) mapPos.x = 0;
+      else if (mapPos.x < -widthBorder) mapPos.x = -widthBorder;
+
+      mapPos.y=mapCanvas.clientWidth/2-mapSize*posNum.y/100;
+      if (mapPos.y > 0) mapPos.y = 0;
+      else if (mapPos.y < -widthBorder) mapPos.y = -widthBorder;
+      
+    }
+
+    //一定の拡大倍率になったら表示
+    if (mapSize >= appearSize) {
+      let mapObjectBox = document.getElementsByClassName("mapObjectBox");
+      for (let i = 0; i < mapObjectBox.length; i++) {
+        mapObjectBox[i].classList.remove("invisible");
+      }
+      let zoomDescription = document.getElementById("zoomDescription");
+      zoomDescription.classList.add("invisible");
+    }
+
+    setMapPos(mapPos.x, mapPos.y, mapSize);
 
   }, []);
 
@@ -56,11 +129,23 @@ function Map() {
         y: e.touches[0].clientY
       };
 
-      mapPos.x += pos.x - prePos0.x;
-      mapPos.y += pos.y - prePos0.y;
+      let mapCanvas = document.getElementById("mapCanvas");
+      let widthBorder = mapSize - mapCanvas.clientWidth;
 
-      prePos0.x = pos.x;
-      prePos0.y = pos.y;
+      mapPos.x += pos.x - prePos0.x;
+      if (mapPos.x > 0) mapPos.x = 0;
+      else if (mapPos.x < -widthBorder) mapPos.x = -widthBorder;
+      else prePos0.x = pos.x;
+
+      mapPos.y += pos.y - prePos0.y;
+      if (mapPos.y > 0) mapPos.y = 0;
+      else if (mapPos.y < -widthBorder) mapPos.y = -widthBorder;
+      else prePos0.y = pos.y;
+
+      //mapPos.x += pos.x - prePos0.x;
+      //mapPos.y += pos.y - prePos0.y;
+      //prePos0.x = pos.x;
+      //prePos0.y = pos.y;
 
       setMapPos(mapPos.x, mapPos.y, mapSize);
     }
@@ -79,30 +164,85 @@ function Map() {
       let campusMap = document.getElementById("mapMovingBox"); //画像によるので引数で変えられるようにする
       let campusMapBounds = campusMap.getBoundingClientRect();
 
-      const zoomRate = 2 * (dis - preDis) * mapSize / mapWidth;
+      var zoomRate = 2 * (dis - preDis) * mapSize / mapWidth;
       mapSize += zoomRate; //ズームイン・アウト
 
-      mapPos.x += zoomRate * (campusMapBounds.left - midPos.x) / mapSize;
-      mapPos.y += zoomRate * (campusMapBounds.top - midPos.y) / mapSize;
+      if (mapSize > zoomLimit) {
+        zoomRate = 0;
+        mapSize = zoomLimit;
+      }
+
+      //mapPos.x += zoomRate * (campusMapBounds.left - midPos.x) / mapSize;
+      //mapPos.y += zoomRate * (campusMapBounds.top - midPos.y) / mapSize;
 
       preDis = dis;
 
+      let mapCanvas = document.getElementById("mapCanvas");
+      let widthBorder = mapSize - mapCanvas.clientWidth;
+
+      let isMapBorder = {
+        x: 0, y: 0
+      };
+
+      mapPos.x += zoomRate * (campusMapBounds.left - midPos.x) / mapSize;
+      if (mapPos.x > 0) {
+        mapPos.x = 0;
+        isMapBorder.x++;
+      }
+      if (mapPos.x < -widthBorder) {
+        mapPos.x = -widthBorder;
+        isMapBorder.x++;
+      }
+
+      mapPos.y += zoomRate * (campusMapBounds.top - midPos.y) / mapSize;
+      if (mapPos.y > 0) {
+        mapPos.y = 0;
+        isMapBorder.y++;
+      }
+      if (mapPos.y < -widthBorder) {
+        mapPos.y = -widthBorder;
+        isMapBorder.y++;
+      }
+
+      if (isMapBorder.x == 2) {
+        mapSize = mapCanvas.clientWidth;
+        mapPos.x = 0;
+      }
+
+      if (isMapBorder.y == 2) {
+        mapSize = mapCanvas.clientWidth;
+        mapPos.y = 0;
+      }
+
       //2本指での移動
+
       mapPos.x += midPos.x - preMidPos.x;
+      if (mapPos.x > 0) mapPos.x = 0;
+      else if (mapPos.x < -widthBorder) mapPos.x = -widthBorder;
+      else preMidPos.x = midPos.x;
+
       mapPos.y += midPos.y - preMidPos.y;
-      preMidPos.x = midPos.x;
-      preMidPos.y = midPos.y;
+      if (mapPos.y > 0) mapPos.y = 0;
+      else if (mapPos.y < -widthBorder) mapPos.y = -widthBorder;
+      else preMidPos.y = midPos.y;
+
+      //mapPos.x += midPos.x - preMidPos.x;
+      //mapPos.y += midPos.y - preMidPos.y;
+      //preMidPos.x = midPos.x;
+      //preMidPos.y = midPos.y;
 
       setMapPos(mapPos.x, mapPos.y, mapSize);
 
       //一定の拡大倍率になったら表示
-      if (mapSize >= 800 && mapSize - zoomRate < 800) {
+      if (mapSize >= appearSize && mapSize - zoomRate < appearSize) {
         let mapObjectBox = document.getElementsByClassName("mapObjectBox");
         for (let i = 0; i < mapObjectBox.length; i++) {
           mapObjectBox[i].classList.remove("invisible");
         }
+        let zoomDescription = document.getElementById("zoomDescription");
+        zoomDescription.classList.add("invisible");
       }
-      else if (mapSize < 800 && mapSize - zoomRate >= 800) {
+      else if (mapSize < appearSize && mapSize - zoomRate >= appearSize) {
         let mapObjectBox = document.getElementsByClassName("mapObjectBox");
         for (let i = 0; i < mapObjectBox.length; i++) {
           mapObjectBox[i].classList.add("invisible");
@@ -119,19 +259,21 @@ function Map() {
         y: e.clientY
       };
 
-      let widthBorder=mapWidth*(1+mapSize/mapWidth);
-      console.log(widthBorder);
+      let mapCanvas = document.getElementById("mapCanvas");
+      let widthBorder = mapSize - mapCanvas.clientWidth;
 
       mapPos.x += pos.x - prePos0.x;
       if (mapPos.x > 0) mapPos.x = 0;
-      else if(mapPos.x < -widthBorder) mapPos.x = -widthBorder;
+      else if (mapPos.x < -widthBorder) mapPos.x = -widthBorder;
       else prePos0.x = pos.x;
 
       mapPos.y += pos.y - prePos0.y;
       if (mapPos.y > 0) mapPos.y = 0;
-      else if(mapPos.y < -widthBorder) mapPos.y = -widthBorder;
+      else if (mapPos.y < -widthBorder) mapPos.y = -widthBorder;
       else prePos0.y = pos.y;
 
+      //mapPos.x += pos.x - prePos0.x;
+      //mapPos.y += pos.y - prePos0.y;
       //prePos0.x = pos.x;
       //prePos0.y = pos.y;
 
@@ -149,11 +291,53 @@ function Map() {
     let campusMap = document.getElementById("mapMovingBox"); //画像によるので引数で変えられるようにする
     let campusMapBounds = campusMap.getBoundingClientRect();
 
-    const zoomRate = e.deltaY * -0.4 * mapSize / mapWidth;
+    var zoomRate = e.deltaY * -0.4 * mapSize / mapWidth;
     mapSize += zoomRate; //ズームイン・アウト
 
+    if (mapSize > zoomLimit) {
+      zoomRate = 0;
+      mapSize = zoomLimit;
+    }
+
+    //mapPos.x += zoomRate * (campusMapBounds.left - pos.x) / mapSize;
+    //mapPos.y += zoomRate * (campusMapBounds.top - pos.y) / mapSize;
+
+    let mapCanvas = document.getElementById("mapCanvas");
+    let widthBorder = mapSize - mapCanvas.clientWidth;
+
+    let isMapBorder = {
+      x: 0, y: 0
+    };
+
     mapPos.x += zoomRate * (campusMapBounds.left - pos.x) / mapSize;
+    if (mapPos.x > 0) {
+      mapPos.x = 0;
+      isMapBorder.x++;
+    }
+    if (mapPos.x < -widthBorder) {
+      mapPos.x = -widthBorder;
+      isMapBorder.x++;
+    }
+
     mapPos.y += zoomRate * (campusMapBounds.top - pos.y) / mapSize;
+    if (mapPos.y > 0) {
+      mapPos.y = 0;
+      isMapBorder.y++;
+    }
+    if (mapPos.y < -widthBorder) {
+      mapPos.y = -widthBorder;
+      isMapBorder.y++;
+    }
+
+    if (isMapBorder.x == 2) {
+      mapSize = mapCanvas.clientWidth;
+      mapPos.x = 0;
+    }
+
+    if (isMapBorder.y == 2) {
+      mapSize = mapCanvas.clientWidth;
+      mapPos.y = 0;
+    }
 
     setMapPos(mapPos.x, mapPos.y, mapSize);
 
@@ -163,6 +347,8 @@ function Map() {
       for (let i = 0; i < mapObjectBox.length; i++) {
         mapObjectBox[i].classList.remove("invisible");
       }
+      let zoomDescription = document.getElementById("zoomDescription");
+      zoomDescription.classList.add("invisible");
     }
     else if (mapSize < appearSize && mapSize - zoomRate >= appearSize) {
       let mapObjectBox = document.getElementsByClassName("mapObjectBox");
@@ -190,6 +376,7 @@ function Map() {
   function setMapPos(mapPosX, mapPosY, mapSize) {
     let campusMap = document.getElementById("mapMovingBox");
     campusMap.style.width = mapSize + "px";
+    campusMap.style.height = mapSize + "px";
     campusMap.style.left = mapPosX + "px";
     campusMap.style.top = mapPosY + "px";
   }
@@ -211,7 +398,8 @@ function Map() {
 
         let mapObjectImage = document.createElement("input");
         mapObjectImage.type = "image";
-        mapObjectImage.src = `${process.env.PUBLIC_URL}/img/map/tipIcon.png`;
+        //mapObjectImage.src = `${process.env.PUBLIC_URL}/img/map/tipIcon.png`;
+        mapObjectImage.src = projectData[i][j].imgPath;
         mapObjectImage.classList.add("mapObjectImage");
         mapObjectImage.onclick = toProjectDetail;
         mapObjectImage.id = i + "-" + j;
@@ -220,8 +408,9 @@ function Map() {
         mapObjectText.classList.add("mapObjectText");
         mapObjectText.innerText = projectData[i][j].groupName;
 
+
         mapObjectBox.appendChild(mapObjectImage);
-        mapObjectBox.appendChild(mapObjectText);
+        //mapObjectBox.appendChild(mapObjectText);
 
         mapMovingBox.appendChild(mapObjectBox);
       }
@@ -257,27 +446,25 @@ function Map() {
 
   return (
     <>
+      <img src={`${process.env.PUBLIC_URL}/img/backGround/antique.jpg`} className="backGroundImage responsiveWidth" />
+
       <div id="mapCanvas" className="mapCanvas" ref={circleRef} onMouseDown={setPrePos_mouse} onMouseMove={scrollMap_mouse} onMouseUp={setEndPos_mosue} onMouseLeave={setEndPos_mosue}>
         <div id="mapMovingBox" className="mapMovingBox">
           <img id="mapBackImg" className="mapBackImg" src={`${process.env.PUBLIC_URL}/img/map/mapBack.jpg`} />
           <img id="campusMap_1" className="campusMap_1" src={`${process.env.PUBLIC_URL}/img/map/campusMap_1.svg`} />
         </div>
+        <div id="zoomDescription" className="zoomDescription">マップを拡大すると各企画が表示されます</div>
       </div>
 
-      <img src={`${process.env.PUBLIC_URL}/img/backGround/antique.jpg`} className="backGroundImage responsiveWidth" />
       <div className="contents">
         <div className="contents_innerBlock">
-          <br />
-          <p>あいうえお</p><br />
-          <p>かきくけこ</p><br />
-          <p>さしすせそ</p><br />
-          <p>たちつてと</p><br />
-          <p>なにぬねの</p><br />
-          <p>はひふへほ</p><br />
-          <p>まみむめも</p><br />
-          <p>やゆよ</p><br />
-          <p>らりるれろ</p><br />
-          <p>わをん</p>
+          <ul className="ul_map">
+            <li>構造デザイン研究会</li>
+            <li>バレーボール部</li>
+            <li>自転車愛好会</li>
+            <li>サッカー部</li>
+            <li>ロボット研究会</li>
+          </ul>
         </div>
 
       </div>
