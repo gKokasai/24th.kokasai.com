@@ -228,7 +228,7 @@
         {
             "groupName": "硬式野球部",
             "projectName": "うどん",
-            "description": "No Description",
+            "description": "このうどんが美味しくない可能性これ、一切なーい<br />※水増し請求はしません。",
             "imgPath": "./img/circleCut/cc6-2.jpg",
             "posTop": "20%",
             "posLeft": "30%"
@@ -255,16 +255,16 @@
         {
             "groupName": "バスケットボール部",
             "projectName": "焼きそば",
-            "description": "No Description",
-            "imgPath": "./img/circleCut/noImage.jpg",
+            "description": "バスケ部は焼きそばを販売します。部員全員でめちゃくちゃ美味しい焼きそばを作るんで是非足を運んでください。",
+            "imgPath": "./img/circleCut/cc7-1.jpg",
             "posTop": "20%",
             "posLeft": "15%"
         },
         {
             "groupName": "ソフトテニス部",
             "projectName": "クレーP屋さん",
-            "description": "No Description",
-            "imgPath": "./img/circleCut/noImage.jpg",
+            "description": "ソフトテニス部が作るおいしいクレープです",
+            "imgPath": "./img/circleCut/cc7-2.jpg",
             "posTop": "20%",
             "posLeft": "30%"
         },
@@ -377,7 +377,7 @@
             "groupName": "SF研究部",
             "projectName": "ライブRPGおよび部誌頒布",
             "description": "No Description",
-            "imgPath": "./img/circleCut/noImage.jpg",
+            "imgPath": "./img/circleCut/cc10-2.jpg",
             "posTop": "20%",
             "posLeft": "30%"
         },
@@ -400,8 +400,8 @@
         {
             "groupName": "将棋部",
             "projectName": "将棋体験",
-            "description": "No Description",
-            "imgPath": "./img/circleCut/noImage.jpg",
+            "description": "将棋部では将棋体験を行っております。初心者、経験者問わず大歓迎です！！！",
+            "imgPath": "./img/circleCut/cc10-5.jpg",
             "posTop": "20%",
             "posLeft": "20%"
         }
@@ -411,8 +411,8 @@
         {
             "groupName": "自転車愛好会",
             "projectName": "自転車の展示",
-            "description": "No Description",
-            "imgPath": "./img/circleCut/noImage.jpg",
+            "description": "自転車愛好会は普段使用している自転車の展示を行います。<br />興味ある方は是非見てみてください。",
+            "imgPath": "./img/circleCut/cc11-1.jpg",
             "posTop": "20%",
             "posLeft": "15%"
         },
