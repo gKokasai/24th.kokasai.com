@@ -148,7 +148,7 @@ function Access() {
             <p className="heading3">諸注意</p>
             <p>※駐車場は両日<span className="heading3">9:30</span>からの解放となります。</p>
             <p>※乗用車は<span className="heading4">一家族様につき一台</span>での来場をお願いします。</p>
-            <p>※当日は混雑が予想されますので、構内の駐車場への駐車が厳しいと判断された場合、<span className="heading4">新前橋駅付近の有料駐車場への駐車をお願いする場合があります</span>。ご了承ください。</p>
+            <p>※当日は混雑が予想されますので、構内の駐車場への駐車が厳しいと判断された場合、<span className="heading4">新前橋駅付近の有料駐車場への駐車をお願いする場合があります</span>。あらかじめご了承ください。</p>
           </AccessContent>
 
           <br />
