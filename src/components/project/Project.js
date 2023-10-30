@@ -14,6 +14,7 @@ function Project() {
   const quely = new URLSearchParams(useLocation().search);
   var grd = parseInt(quely.get("grd")); //初期の星を指定
   if (grd == null) grd = 1;
+  if (grd == 0) grd = 1;
   if (projectData[grd] == undefined) grd = 1;
 
 
