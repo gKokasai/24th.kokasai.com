@@ -128,6 +128,8 @@ function Access() {
             <ul className="ul_access">
               <li>乗用車でお越しの方は、南西にある<span className="heading4">大駐車場</span>もしくは<span className="heading4">南門から入って右手の駐車場</span>をご利用ください。</li>
             </ul>
+            <p><a href={`${process.env.PUBLIC_URL}/img/parking/parking_1.jpg`} target="_blank" rel="noreferrer noopener">&gt;&gt;大駐車場付近配置図</a></p>
+            <p><a href={`${process.env.PUBLIC_URL}/img/parking/parking_2.jpg`} target="_blank" rel="noreferrer noopener">&gt;&gt;南門駐車場付近配置図</a></p>
           </AccessContent>
 
           <AccessContent>
