@@ -126,22 +126,27 @@ function Access() {
 
           <AccessContent>
             <ul className="ul_access">
-              <li>乗用車でお越しの方は、南西にある<span className="heading4">大駐車場</span>もしくは<span className="heading4">南門から入って右手の駐車場</span>をご利用ください</li>
-            </ul>
-            <p>※駐車場は両日<span className="heading3">9:30</span>からの解放となります</p>
-            <p>※乗用車は一家族様につき一台での来場をお願いします</p>
-          </AccessContent>
-
-          <AccessContent>
-            <ul className="ul_access">
-              <li>原付・バイクでお越しの方は、<span className="heading4">大駐車場の駐輪スペースの東側半分</span>をご利用ください</li>
+              <li>乗用車でお越しの方は、南西にある<span className="heading4">大駐車場</span>もしくは<span className="heading4">南門から入って右手の駐車場</span>をご利用ください。</li>
             </ul>
           </AccessContent>
 
           <AccessContent>
             <ul className="ul_access">
-              <li>自転車でお越しの方は、<span className="heading4">正門から入って右奥の駐輪場</span>をご利用ください</li>
+              <li>原付・バイクでお越しの方は、<span className="heading4">大駐車場の駐輪スペースの東側半分</span>をご利用ください。</li>
             </ul>
+          </AccessContent>
+
+          <AccessContent>
+            <ul className="ul_access">
+              <li>自転車でお越しの方は、<span className="heading4">正門から入って右奥の駐輪場</span>をご利用ください。</li>
+            </ul>
+          </AccessContent>
+
+          <AccessContent>
+            <p className="heading3">諸注意</p>
+            <p>※駐車場は両日<span className="heading3">9:30</span>からの解放となります。</p>
+            <p>※乗用車は<span className="heading4">一家族様につき一台</span>での来場をお願いします。</p>
+            <p>※当日は混雑が予想されますので、構内の駐車場への駐車が厳しいと判断された場合、<span className="heading4">新前橋駅付近の有料駐車場への駐車をお願いする場合があります</span>。ご了承ください。</p>
           </AccessContent>
 
           <br />
