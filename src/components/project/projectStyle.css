@@ -228,7 +228,9 @@
 
 .leftButton{
     position: absolute;
-    top: 16vh;
+    -webkit-transform: translate(0%, -50%);
+    transform: translate(0%, -50%);
+    top: 50%;
     height: 16vh;
     width: 8vh;
     left: 0%;
@@ -236,7 +238,9 @@
 
 .rightButton{
     position: absolute;
-    top: 16vh;
+    -webkit-transform: translate(0%, -50%);
+    transform: translate(0%, -50%);
+    top: 50%;
     height: 16vh;
     width: 8vh;
     right: 0%;
