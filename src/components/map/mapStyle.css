@@ -65,14 +65,49 @@
     font-size: 1rem;
 }
 
-
-.zoomDescription{
-    position: relative;
+.mapTypeDescription{
+    position: absolute;
     text-align: center;
     width: max-content;
     top: 0rem;
     left: 0rem;
     padding: 0.5rem 0.5rem;
+    background-color: rgba(244, 127, 255, 0.5);
+    backdrop-filter: blur(5px);
+    font-size: 1.2rem;
+}
+
+.zoomDescription{
+    position: absolute;
+    text-align: center;
+    width: max-content;
+    bottom: 0rem;
+    right: 0rem;
+    padding: 0.5rem 0.5rem;
     background-color: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(5px);
     font-size: 0.8rem;
+}
+
+.mapProjectList{
+    position: relative;
+    margin: 1rem 0rem;
+    padding: 1rem 1rem;
+    /*line-height: 2rem;*/
+    font-size: 1.3rem;
+    background-color: rgba(197, 255, 105, 0.5);
+    backdrop-filter: blur(5px);
+}
+
+.mapChangeButton{
+    position: relative;
+    margin: 0rem auto 2rem auto;
+    padding: 0.5rem 2rem;
+    width: max-content;
+    height: max-content;
+
+    border: 3px solid black;
+    border-radius: 0.5rem;
+    background-color: aquamarine;
+    font-size: 1.2rem;
 }

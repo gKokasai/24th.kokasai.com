@@ -49,6 +49,7 @@ function Map() {
   const zoomLimit = 1500; //ズームの限界
   const focusSize = 1000; //フォーカスした際のマップの初期サイズ
   var mapType = 1; //1:屋外マップ,2:屋内マップ
+  const mapTypeName = ["屋外","屋内"];
 
 
   //1度だけ実行
@@ -84,9 +85,21 @@ function Map() {
 
     }
 
-    //屋内マップを隠す
+    //屋内マップと企画リストを隠す
     let campusMap_2 = document.getElementById("campusMap_2");
     campusMap_2.classList.add("invisible");
+    let mapProjectList_2 =document.getElementById("mapProjectList_2");
+    mapProjectList_2.style.display="none";
+
+    //マップの説明を変更する
+    let mapTypeDescription =document.getElementById("mapTypeDescription");
+    mapTypeDescription.innerText=mapTypeName[mapType-1]+"マップ";
+
+    let mapProjectTitle =document.getElementById("mapProjectTitle");
+    mapProjectTitle.innerText=mapTypeName[mapType-1]+"企画一覧";
+
+    let mapChangeButton =document.getElementById("mapChangeButton");
+    mapChangeButton.innerText=mapTypeName[2-mapType]+"マップに切り替え";
 
     //一定の拡大倍率になったら表示
     if (mapSize >= appearSize) {
@@ -430,17 +443,37 @@ function Map() {
     mapPos.y = 0;
     mapSize = mapWidth;
 
-    //マップを非表示にする
+    //マップと企画リストを非表示にする
     let campusMap_1 = document.getElementById("campusMap_1");
     let campusMap_2 = document.getElementById("campusMap_2");
-    if(mapType==1){
+    let mapProjectList_1 =document.getElementById("mapProjectList_1");
+    let mapProjectList_2 =document.getElementById("mapProjectList_2");
+
+    if (mapType == 1) {
       campusMap_1.classList.remove("invisible");
       campusMap_2.classList.add("invisible");
+
+      mapProjectList_1.style.display="block";
+      mapProjectList_2.style.display="none";
     }
-    if(mapType==2){
+    if (mapType == 2) {
       campusMap_1.classList.add("invisible");
       campusMap_2.classList.remove("invisible");
+
+      mapProjectList_1.style.display="none";
+      mapProjectList_2.style.display="block";
     }
+
+    //マップの説明を変更する
+    let mapTypeDescription =document.getElementById("mapTypeDescription");
+    mapTypeDescription.innerText=mapTypeName[mapType-1]+"マップ";
+
+    let mapProjectTitle =document.getElementById("mapProjectTitle");
+    mapProjectTitle.innerText=mapTypeName[mapType-1]+"企画一覧";
+
+    let mapChangeButton =document.getElementById("mapChangeButton");
+    mapChangeButton.innerText=mapTypeName[2-mapType]+"マップに切り替え";
+    
 
     //アイコンを非表示にする
     let mapObjectBox = document.getElementsByClassName("mapObjectBox");
@@ -477,8 +510,6 @@ function Map() {
     window.location.assign(Pages.projectDetail.path + "?a=" + ab[0] + "&b=" + ab[1]);
   }
 
-  //<img id="campusMap_1" className="campusMap_1" src={`${process.env.PUBLIC_URL}/img/map/campusMap_1.svg`} />
-  //<img id="campusMap_2" className="campusMap_2" src={`${process.env.PUBLIC_URL}/img/map/campusMap_2.svg`} />
 
 
   return (
@@ -493,22 +524,87 @@ function Map() {
           <img id="campusMap_2" className="campusMap_2" src={`${process.env.PUBLIC_URL}/img/map/campusMap_2.svg`} />
 
         </div>
+
+        <div id="mapTypeDescription" className="mapTypeDescription"></div>
         <div id="zoomDescription" className="zoomDescription">マップを拡大すると各企画が表示されます</div>
+
       </div>
 
-      <button onClick={changeMap}>あいうえお</button>
+      <div onClick={changeMap} id="mapChangeButton" className="mapChangeButton" >あいうえお</div>
 
       <div className="contents">
         <div className="contents_innerBlock">
-          <ul className="ul_map">
-            <li>構造デザイン研究会</li>
-            <li>バレーボール部</li>
-            <li>自転車愛好会</li>
-            <li>サッカー部</li>
-            <li>ロボット研究会</li>
-          </ul>
-        </div>
 
+          <div className="mapProjectList">
+            <p id="mapProjectTitle" className="heading2"></p>
+
+            <ul id="mapProjectList_1" className="ul_map">
+              <li>構造デザイン研究会</li>
+              <li>バレーボール部</li>
+              <li>自転車愛好会</li>
+              <li>サッカー部</li>
+              <li>ロボット研究会</li>
+              <li>5年 環境都市工学科</li>
+              <li>ラグビー愛好会</li>
+              <li>理科部</li>
+              <li>学生会執行部</li>
+              <li>クイズ研究会</li>
+              <li>3年 環境都市工学科</li>
+              <li>3Dデザイン研究会</li>
+              <li>4年 電子メディア工学科</li>
+              <li>SF研究部</li>
+              <li>4年 機械工学科</li>
+              <li>4年 環境都市工学科</li>
+              <li>バスケットボール部</li>
+              <li>コンクリートカヌー愛好会</li>
+              <li>テニス部</li>
+              <li>2年 3組</li>
+              <li>剣道部</li>
+              <li>陸上競技部</li>
+              <li>エコノパワー愛好会</li>
+              <li>1年 1組</li>
+              <li>バドミントン部</li>
+              <li>卓球部</li>
+              <li>硬式野球部</li>
+              <li>ソフトテニス部</li>
+              <li>水泳部</li>
+              <li>3年 電子情報工学科</li>
+              <li>柔道部</li>
+              <li>茶道部</li>
+            </ul>
+
+            <ul id="mapProjectList_2" className="ul_map">
+              <li>将棋部</li>
+              <li>4年 物質工学科</li>
+              <li>1年 3組</li>
+              <li>1年 4組</li>
+              <li>1年 5組</li>
+              <li>2年 5組</li>
+              <li>2年 2組</li>
+              <li>無線通信愛好会</li>
+              <li>3年 物質工学科</li>
+              <li>5年 電子メディア工学科</li>
+              <li>5年 機械工学科</li>
+              <li>3年 電子メディア工学科</li>
+              <li>4年 電子情報工学科</li>
+              <li>3年 機械工学科</li>
+              <li>2年 4組</li>
+              <li>文芸部</li>
+              <li>入試広報ブース</li>
+              <li>5年 電子情報工学科</li>
+              <li>2年 1組</li>
+              <li>1年 2組</li>
+              <li>有志（ミラクル★ライド）</li>
+              <li>吹奏楽部</li>
+              <li>写真部</li>
+              <li>5年 物質工学科</li>
+              <li>演劇部</li>
+              <li>有志（M科工房～ウッドバーニング体験～）</li>
+              <li>有志（ガチャガチャジャングル）</li>
+            </ul>
+          </div>
+
+        </div>
       </div>
     </>
   );
