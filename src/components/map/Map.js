@@ -507,7 +507,7 @@ function Map() {
   //企画詳細ページに移動
   function toProjectDetail() {
     const ab = this.id.split("-");
-    window.location.assign(Pages.projectDetail.path + "?a=" + ab[0] + "&b=" + ab[1]);
+    window.location.assign(Pages.projectDetail.path + "?grd=" + ab[0] + "&cls=" + ab[1]);
   }
 
 
