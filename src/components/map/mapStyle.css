@@ -28,7 +28,16 @@
 
 .campusMap_1{
     position: absolute;
-    width: 130%;
+    width: 135%;
+    top: 0%;
+    left: 0%;
+}
+
+.campusMap_2{
+    position: absolute;
+    width: 110%;
+    top: 10%;
+    left: -4%;
 }
 
 .mapObjectBox{

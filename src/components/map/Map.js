@@ -14,25 +14,25 @@ function Map() {
   var grd = parseInt(quely.get("grd"));
   var cls = parseInt(quely.get("cls"));
   var isFocus = 1;
-  if (grd == null||cls == null){
-    grd=1;
-    cls=1;
-    isFocus=0;
+  if (grd == null || cls == null) {
+    grd = 1;
+    cls = 1;
+    isFocus = 0;
   }
-  if (grd == 0||cls == 0){
-    grd=1;
-    cls=1;
-    isFocus=0;
+  if (grd == 0 || cls == 0) {
+    grd = 1;
+    cls = 1;
+    isFocus = 0;
   }
   if (projectData[grd] == undefined) {
-    grd=1;
-    cls=1;
-    isFocus=0;
+    grd = 1;
+    cls = 1;
+    isFocus = 0;
   }
   if (projectData[grd][cls] == undefined) {
-    grd=1;
-    cls=1;
-    isFocus=0;
+    grd = 1;
+    cls = 1;
+    isFocus = 0;
   }
 
 
@@ -48,6 +48,7 @@ function Map() {
   const appearSize = 700; //アイコンの表示/非表示の境目のサイズ[px]
   const zoomLimit = 1500; //ズームの限界
   const focusSize = 1000; //フォーカスした際のマップの初期サイズ
+  var mapType = 1; //1:屋外マップ,2:屋内マップ
 
 
   //1度だけ実行
@@ -56,32 +57,36 @@ function Map() {
     createMapObjects();
 
     //クエリで指定されている場合、その企画をフォーカス
-    if(isFocus==1){
+    if (isFocus == 1) {
 
-      mapSize=focusSize;
+      mapSize = focusSize;
 
       //%を数字に変換
-      let posNoPercent={
-        x:projectData[grd][cls].posLeft.replace(/[^0-9]/g, ''),
-        y:projectData[grd][cls].posTop.replace(/[^0-9]/g, '')
+      let posNoPercent = {
+        x: projectData[grd][cls].posLeft.replace(/[^0-9]/g, ''),
+        y: projectData[grd][cls].posTop.replace(/[^0-9]/g, '')
       }
-      let posNum={
-        x:Number(posNoPercent.x),
-        y:Number(posNoPercent.y)
+      let posNum = {
+        x: Number(posNoPercent.x),
+        y: Number(posNoPercent.y)
       }
-      
+
       let mapCanvas = document.getElementById("mapCanvas");
       let widthBorder = mapSize - mapCanvas.clientWidth;
 
-      mapPos.x=mapCanvas.clientWidth/2-mapSize*posNum.x/100;
+      mapPos.x = mapCanvas.clientWidth / 2 - mapSize * posNum.x / 100;
       if (mapPos.x > 0) mapPos.x = 0;
       else if (mapPos.x < -widthBorder) mapPos.x = -widthBorder;
 
-      mapPos.y=mapCanvas.clientWidth/2-mapSize*posNum.y/100;
+      mapPos.y = mapCanvas.clientWidth / 2 - mapSize * posNum.y / 100;
       if (mapPos.y > 0) mapPos.y = 0;
       else if (mapPos.y < -widthBorder) mapPos.y = -widthBorder;
-      
+
     }
+
+    //屋内マップを隠す
+    let campusMap_2 = document.getElementById("campusMap_2");
+    campusMap_2.classList.add("invisible");
 
     //一定の拡大倍率になったら表示
     if (mapSize >= appearSize) {
@@ -415,6 +420,35 @@ function Map() {
         mapMovingBox.appendChild(mapObjectBox);
       }
     }
+  }
+
+
+  //マップを切り替える
+  function changeMap() {
+    mapType = (mapType == 1) ? 2 : 1;
+    mapPos.x = 0;
+    mapPos.y = 0;
+    mapSize = mapWidth;
+
+    //マップを非表示にする
+    let campusMap_1 = document.getElementById("campusMap_1");
+    let campusMap_2 = document.getElementById("campusMap_2");
+    if(mapType==1){
+      campusMap_1.classList.remove("invisible");
+      campusMap_2.classList.add("invisible");
+    }
+    if(mapType==2){
+      campusMap_1.classList.add("invisible");
+      campusMap_2.classList.remove("invisible");
+    }
+
+    //アイコンを非表示にする
+    let mapObjectBox = document.getElementsByClassName("mapObjectBox");
+    for (let i = 0; i < mapObjectBox.length; i++) {
+      mapObjectBox[i].classList.add("invisible");
+    }
+
+    setMapPos(mapPos.x, mapPos.y, mapSize);
 
   }
 
@@ -443,6 +477,9 @@ function Map() {
     window.location.assign(Pages.projectDetail.path + "?a=" + ab[0] + "&b=" + ab[1]);
   }
 
+  //<img id="campusMap_1" className="campusMap_1" src={`${process.env.PUBLIC_URL}/img/map/campusMap_1.svg`} />
+  //<img id="campusMap_2" className="campusMap_2" src={`${process.env.PUBLIC_URL}/img/map/campusMap_2.svg`} />
+
 
   return (
     <>
@@ -451,10 +488,15 @@ function Map() {
       <div id="mapCanvas" className="mapCanvas" ref={circleRef} onMouseDown={setPrePos_mouse} onMouseMove={scrollMap_mouse} onMouseUp={setEndPos_mosue} onMouseLeave={setEndPos_mosue}>
         <div id="mapMovingBox" className="mapMovingBox">
           <img id="mapBackImg" className="mapBackImg" src={`${process.env.PUBLIC_URL}/img/map/mapBack.jpg`} />
+
           <img id="campusMap_1" className="campusMap_1" src={`${process.env.PUBLIC_URL}/img/map/campusMap_1.svg`} />
+          <img id="campusMap_2" className="campusMap_2" src={`${process.env.PUBLIC_URL}/img/map/campusMap_2.svg`} />
+
         </div>
         <div id="zoomDescription" className="zoomDescription">マップを拡大すると各企画が表示されます</div>
       </div>
+
+      <button onClick={changeMap}>あいうえお</button>
 
       <div className="contents">
         <div className="contents_innerBlock">
