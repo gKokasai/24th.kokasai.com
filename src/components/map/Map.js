@@ -547,12 +547,12 @@ function Map() {
 
         </div>
 
-        <div id="mapTypeDescription" className="mapTypeDescription"></div>
+        <div id="mapTypeDescription" className="mapTypeDescription">屋外マップ</div>
         <div id="zoomDescription" className="zoomDescription">マップを拡大すると各企画が表示されます</div>
 
       </div>
 
-      <div onClick={changeMap} id="mapChangeButton" className="mapChangeButton" >あいうえお</div>
+      <div onClick={changeMap} id="mapChangeButton" className="mapChangeButton" >屋内マップに切り替え</div>
 
       <div className="contents">
         <div className="contents_innerBlock">
