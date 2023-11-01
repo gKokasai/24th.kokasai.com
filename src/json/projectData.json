@@ -7,40 +7,45 @@
             "projectName": "タイ喫茶อายากะ",
             "description": "昨年までタイに赴任していたあやか先生主導のもと、美味しいガパオライスや揚げバナナを作っています！小腹が空いた人からがっつり食べたい人まで、ぜひ一度覗きに来てください！",
             "imgPath": "./img/circleCut/cc1-1.jpg",
-            "posTop": "20%",
-            "posLeft": "15%"
+            "mapType": "1",
+            "posTop": "55%",
+            "posLeft": "35%"
         },
         {
             "groupName": "1年 2組",
             "projectName": "カジノ&カフェ",
             "description": "1-2ではカジノ、飲み物販売を行います。カジノは現金ではなく、入室時にこちらから支給されるチップを使用して行います。手元にあるチップとそれに応じた景品を交換して退出となります。",
             "imgPath": "./img/circleCut/cc1-2.jpg",
-            "posTop": "20%",
-            "posLeft": "30%"
+            "mapType": "2",
+            "posTop": "83%",
+            "posLeft": "44%"
         },
         {
             "groupName": "1年 3組",
             "projectName": "射的",
             "description": "私たち1-3では射的を行います。的に当てても当てなくても、高専に関するクイズに参加すれば景品をゲットできる仕組みになっておりますのでぜひ遊びに来てください！",
             "imgPath": "./img/circleCut/cc1-3.jpg",
-            "posTop": "20%",
-            "posLeft": "45%"
+            "mapType": "2",
+            "posTop": "23%",
+            "posLeft": "22%"
         },
         {
             "groupName": "1年 4組",
             "projectName": "「スタートライン」映画上映＆愉快な仲間たちによる出店",
             "description": "皆さんこんにちは!1年4組です。<br />1年4組のメンバーで作り上げた完全オリジナル映画上映中です!上映スケジュールは1-4公式インスタ、公式ラインをチェック!皆さんの来場をお待ちしております。<br />公式インスタ:2023koukasai1_4",
             "imgPath": "./img/circleCut/cc1-4.jpg",
-            "posTop": "20%",
-            "posLeft": "60%"
+            "mapType": "2",
+            "posTop": "23%",
+            "posLeft": "29%"
         },
         {
             "groupName": "1年 5組",
             "projectName": "射的ゲーム",
             "description": "お祭りといえば射的。<br />ということで私たち 1-5 は射的ゲームをします。<br />子供から大人まで楽しめるものになっています。<br />得点に合わせた景品付き。<br />ぜひ 1-5 までお越しください。待ってます。",
             "imgPath": "./img/circleCut/cc1-5.jpg",
-            "posTop": "20%",
-            "posLeft": "20%"
+            "mapType": "2",
+            "posTop": "23%",
+            "posLeft": "35%"
         }
     ],
     [
@@ -50,40 +55,45 @@
             "projectName": "うすいサファリパーク",
             "description": "うすいサファリパークついに開園!!<br />ってその前日に動物が脱走しちゃった!?<br />与えられる様々なMISSIONをクリアして逃げ出した動物を連れ戻そう!!",
             "imgPath": "./img/circleCut/cc2-1.jpg",
-            "posTop": "20%",
-            "posLeft": "15%"
+            "mapType": "2",
+            "posTop": "72%",
+            "posLeft": "41%"
         },
         {
             "groupName": "2年 2組",
             "projectName": "クイズ2-2より賢いの？",
             "description": "2年2組が作った問題に正解するほど、景品が豪華に！<br />最高にロックでクレイジーな高専クイズ！問題はレベル別で、初心者でも挑戦OK！あなたは2-2のクイズに答えられますか？",
             "imgPath": "./img/circleCut/cc2-2.jpg",
-            "posTop": "20%",
-            "posLeft": "30%"
+            "mapType": "2",
+            "posTop": "34%",
+            "posLeft": "34%"
         },
         {
             "groupName": "2年 3組",
             "projectName": "神社でやってる縁日",
             "description": "2年3組は縁日です。射的とか、くじ引きとかをやってます。神社作ってパワースポットになっているのでお参りしてみてください！色々叶えてくれます。是非足を運んでね。",
             "imgPath": "./img/circleCut/cc2-3.jpg",
-            "posTop": "20%",
-            "posLeft": "45%"
+            "mapType": "1",
+            "posTop": "45%",
+            "posLeft": "42%"
         },
         {
             "groupName": "2年 4組",
             "projectName": "サイエンスカフェ",
             "description": "色が変わる不思議なドリンクやスイーツ、層が分かれているツートンドリンクなど、サイエンスなフードをご提供します。化学を今よりもっと身近に感じてみませんか？",
             "imgPath": "./img/circleCut/cc2-4.jpg",
-            "posTop": "20%",
-            "posLeft": "60%"
+            "mapType": "2",
+            "posTop": "46%",
+            "posLeft": "78%"
         },
         {
             "groupName": "2年 5組",
             "projectName": "パイオニーア",
             "description": "シロップを用いて作られた色とりどりのカクテルが嗜める「BARパイオニーア」<br />あなたも1杯いかがでしょうか。",
             "imgPath": "./img/circleCut/cc2-5.jpg",
-            "posTop": "20%",
-            "posLeft": "20%"
+            "mapType": "2",
+            "posTop": "35%",
+            "posLeft": "29%"
         }
     ],
     [
@@ -93,40 +103,45 @@
             "projectName": "3MCRAFT",
             "description": "3Mではワークショップをします！<br />ものづくりの楽しさを知ってもらいたく、実習で使う道具を用いてオルゴール、ミニ四駆作成ができます。ぜひ来てください！",
             "imgPath": "./img/circleCut/cc3-1.jpg",
-            "posTop": "20%",
-            "posLeft": "15%"
+            "mapType": "2",
+            "posTop": "46%",
+            "posLeft": "71%"
         },
         {
             "groupName": "3年 電子メディア工学科",
             "projectName": "cafeコンドルチェ",
             "description": "工華祭を楽しんでいる皆さん！カフェで少し休んでいきませんか？<br />可愛い電気系学生がいる空間でお茶とお菓子をどうぞ。<br />クラシックなメイドカフェをイメージしたCafeコンドルチェへぜひお越しください。",
             "imgPath": "./img/circleCut/cc3-2.jpg",
-            "posTop": "20%",
-            "posLeft": "30%"
+            "mapType": "2",
+            "posTop": "46%",
+            "posLeft": "55%"
         },
         {
             "groupName": "3年 電子情報工学科",
             "projectName": "タコス",
             "description": "ずっとタコスが作りたかった。<br />もうひとつの夢だった。<br />高専時代、落単しそうな時も留年しそうな時も<br />タコスを食べればすぐ元気になれた。<br />そんな僕が辿り着いた最高の一個。<br />タムケンのタコスができました。<br />タコけん！！",
             "imgPath": "./img/circleCut/cc3-3.jpg",
-            "posTop": "20%",
-            "posLeft": "45%"
+            "mapType": "1",
+            "posTop": "64%",
+            "posLeft": "49%"
         },
         {
             "groupName": "3年 物質工学科",
             "projectName": "Café 3K Lab.",
             "description": "3Kは実験をコンセプトとしたカフェを行います。カフェラテのほか色が変わる飲み物や培地ゼリーを販売します。ぜひお越しください。",
             "imgPath": "./img/circleCut/cc3-4.jpg",
-            "posTop": "20%",
-            "posLeft": "60%"
+            "mapType": "2",
+            "posTop": "35%",
+            "posLeft": "49%"
         },
         {
             "groupName": "3年 環境都市工学科",
             "projectName": "スタンプラリー",
             "description": "工華祭を楽しむついでにウォークラリーをしてみませんか?無料で気軽に楽しく参加できます!!<br />赤の広場で景品と交換ができるので是非お越しください。",
             "imgPath": "./img/circleCut/cc3-5.jpg",
-            "posTop": "20%",
-            "posLeft": "20%"
+            "mapType": "1",
+            "posTop": "25%",
+            "posLeft": "50%"
         }
     ],
     [
@@ -136,40 +151,45 @@
             "projectName": "M印良品",
             "description": "高専らしさ満点のグッズを販売！<br />高専の技術力をその目と手で感じろ！！",
             "imgPath": "./img/circleCut/cc4-1.jpg",
-            "posTop": "20%",
-            "posLeft": "15%"
+            "mapType": "1",
+            "posTop": "26%",
+            "posLeft": "62%"
         },
         {
             "groupName": "4年 電子メディア工学科",
             "projectName": "4Eパンケーキませっち",
             "description": "4Eはパンケーキを作ります！全力で美味しくなるよう作るので是非食べにきてください！店名の&quot;ませっち&quot;は4Eの誰かのあだ名です!!",
             "imgPath": "./img/circleCut/cc4-2.jpg",
-            "posTop": "20%",
-            "posLeft": "30%"
+            "mapType": "1",
+            "posTop": "23%",
+            "posLeft": "58%"
         },
         {
             "groupName": "4年 電子情報工学科",
             "projectName": "ボードゲーム喫茶「高専の旅団」",
             "description": "4Jの出し物はボドゲ喫茶です！遊びやすいボードゲームと、遊びながら食べるのに適しているサンドイッチを用意しています。また、ゲームが強いスタッフもおりますので、おひとり様もグループ様もぜひお越しください！",
             "imgPath": "./img/circleCut/cc4-3.jpg",
-            "posTop": "10%",
-            "posLeft": "10%"
+            "mapType": "2",
+            "posTop": "46%",
+            "posLeft": "65%"
         },
         {
             "groupName": "4年 物質工学科",
             "projectName": "化学が学べる！？メイドカフェ",
             "description": "化学についてちょっとだけ学べちゃうメイドカフェ、可愛いメイドさんたちが美味しいドリンクや飲み物を提供してくれちゃいます！記念にチェキも撮れるよ！",
             "imgPath": "./img/circleCut/cc4-4.jpg",
-            "posTop": "20%",
-            "posLeft": "60%"
+            "mapType": "2",
+            "posTop": "23%",
+            "posLeft": "12%"
         },
         {
             "groupName": "4年 環境都市工学科",
             "projectName": "C科ちゃんのポップなコーン",
             "description": "やっほ～！私はc科ちゃんだよ！<br />４cの出し物みんな絶対来てくれるよね！<br />美味しくて何度も食べられちゃう！<br />なにを売っているかは言わなくてもわかるよね？<br />じゃあ、みんな４cで会おうね～",
             "imgPath": "./img/circleCut/cc4-5.jpg",
-            "posTop": "20%",
-            "posLeft": "20%"
+            "mapType": "1",
+            "posTop": "30%",
+            "posLeft": "62%"
         }
     ],
     [
@@ -179,40 +199,45 @@
             "projectName": "対戦型シューティングゲーム",
             "description": "響き渡る砲声ロマン…まだ見ぬ戦場が君を待つ！",
             "imgPath": "./img/circleCut/cc5-1.jpg",
-            "posTop": "20%",
-            "posLeft": "15%"
+            "mapType": "2",
+            "posTop": "46%",
+            "posLeft": "50%"
         },
         {
             "groupName": "5年 電子メディア工学科",
             "projectName": "美男美女が焼く素晴らしいベビーカステラ",
             "description": "ベビーカステラ売ってます！",
             "imgPath": "./img/circleCut/cc5-2.jpg",
-            "posTop": "20%",
-            "posLeft": "30%"
+            "mapType": "2",
+            "posTop": "35%",
+            "posLeft": "56%"
         },
         {
             "groupName": "5年 電子情報工学科",
             "projectName": "お化け屋敷",
             "description": "高貴なる探検家様へ。富と名声を手にした我が父ですが、つい先日永眠しました。父の遺書が墓所にあるのですが、事情により自ら赴くことが許されず困っております。どうか貴殿に遺書を取ってきていただきたいのです。",
             "imgPath": "./img/circleCut/cc5-3.jpg",
-            "posTop": "20%",
-            "posLeft": "45%"
+            "mapType": "2",
+            "posTop": "75%",
+            "posLeft": "24%"
         },
         {
             "groupName": "5年 物質工学科",
             "projectName": "K科クイズ",
             "description": "群馬高専、物質工学科に関するクイズに正解して、お菓子をもらおう！<br />椅子、机も準備しているので、休憩所として使っていただいても大丈夫です！",
             "imgPath": "./img/circleCut/cc5-4.jpg",
-            "posTop": "20%",
-            "posLeft": "60%"
+            "mapType": "2",
+            "posTop": "79%",
+            "posLeft": "74%"
         },
         {
             "groupName": "5年 環境都市工学科",
             "projectName": "高専綿菓C組",
             "description": "No Description",
             "imgPath": "./img/circleCut/noImage.jpg",
-            "posTop": "20%",
-            "posLeft": "20%"
+            "mapType": "1",
+            "posTop": "27%",
+            "posLeft": "38%"
         }
     ],
     [
@@ -222,32 +247,36 @@
             "projectName": "焼き鳥",
             "description": "ずっと焼き鳥でいいのに<br />焼き鳥の極上の味と気合いを入れて焼いて待ってます！！",
             "imgPath": "./img/circleCut/cc6-1.jpg",
-            "posTop": "20%",
-            "posLeft": "15%"
+            "mapType": "1",
+            "posTop": "45%",
+            "posLeft": "49%"
         },
         {
             "groupName": "硬式野球部",
             "projectName": "うどん",
             "description": "No Description",
             "imgPath": "./img/circleCut/cc6-2.jpg",
-            "posTop": "20%",
-            "posLeft": "30%"
+            "mapType": "1",
+            "posTop": "55%",
+            "posLeft": "53%"
         },
         {
             "groupName": "サッカー部",
             "projectName": "ベビーカステラ",
             "description": "ジャンキーなものばかりで 甘いものが食べたくなったあなた! サッカー部の作るベビーカステラはいかがですか?",
             "imgPath": "./img/circleCut/cc6-3.jpg",
-            "posTop": "20%",
-            "posLeft": "45%"
+            "mapType": "1",
+            "posTop": "24%",
+            "posLeft": "38%"
         },
         {
             "groupName": "バレーボール部",
             "projectName": "からあげ",
             "description": "今回もバレー部は唐揚げをします。お腹がすいた時、何でもいいからつまみたい時、鶏に恨みがある時など、いつでもお越しください。元気モリモリのバレー部がお待ちしております。",
             "imgPath": "./img/circleCut/cc6-4.jpg",
-            "posTop": "20%",
-            "posLeft": "60%"
+            "mapType": "1",
+            "posTop": "24%",
+            "posLeft": "34%"
         }
     ],
     [
@@ -257,32 +286,36 @@
             "projectName": "焼きそば",
             "description": "No Description",
             "imgPath": "./img/circleCut/noImage.jpg",
-            "posTop": "20%",
-            "posLeft": "15%"
+            "mapType": "1",
+            "posTop": "28%",
+            "posLeft": "66%"
         },
         {
             "groupName": "ソフトテニス部",
             "projectName": "クレーP屋さん",
             "description": "No Description",
             "imgPath": "./img/circleCut/noImage.jpg",
-            "posTop": "20%",
-            "posLeft": "30%"
+            "mapType": "1",
+            "posTop": "60%",
+            "posLeft": "49%"
         },
         {
             "groupName": "卓球部",
             "projectName": "たこやき",
             "description": "たこやきってほぼピンポン玉やん",
             "imgPath": "./img/circleCut/cc7-3.jpg",
-            "posTop": "20%",
-            "posLeft": "45%"
+            "mapType": "1",
+            "posTop": "52%",
+            "posLeft": "54%"
         },
         {
             "groupName": "柔道部",
             "projectName": "男のじゃがバター",
             "description": "じゃがバターを食べれば、<br />全国大会に行った柔道部のように<br />強くたくましくなれること間違いなし！<br />男のじゃがバター Now for Sale!",
             "imgPath": "./img/circleCut/cc7-4.jpg",
-            "posTop": "20%",
-            "posLeft": "60%"
+            "mapType": "1",
+            "posTop": "64%",
+            "posLeft": "55%"
         }
     ],
     [
@@ -292,32 +325,36 @@
             "projectName": "竹刀フランク",
             "description": "剣道部です。剣道をするには欠かせない竹刀をモチーフとした竹刀フランクを販売しています。日々抱える悩みを竹刀フランクで一刀両断してスッキリしてみませんか？",
             "imgPath": "./img/circleCut/cc8-1.jpg",
-            "posTop": "20%",
-            "posLeft": "15%"
+            "mapType": "1",
+            "posTop": "45%",
+            "posLeft": "45%"
         },
         {
             "groupName": "テニス部",
             "projectName": "お好み焼き",
             "description": "No Description",
             "imgPath": "./img/circleCut/noImage.jpg",
+            "mapType": "1",
             "posTop": "20%",
-            "posLeft": "30%"
+            "posLeft": "65%"
         },
         {
             "groupName": "バドミントン部",
             "projectName": "株式会社いもこうき",
             "description": "『Why don't you buy french fries?』<br />～なぜフライドポテトを買わないのか？～<br />新しい風味、新たな発見<br />ポテトの未知なる可能性、体感してみませんか？",
             "imgPath": "./img/circleCut/cc8-3.jpg",
-            "posTop": "20%",
-            "posLeft": "45%"
+            "mapType": "1",
+            "posTop": "50%",
+            "posLeft": "55%"
         },
         {
             "groupName": "水泳部",
             "projectName": "団子屋 ﾀﾂﾉｵﾄｼｺﾞ",
             "description": "水泳部では団子を販売します。<br />美味しい団子をぜひ食べに来てください!!",
             "imgPath": "./img/circleCut/cc8-4.jpg",
-            "posTop": "20%",
-            "posLeft": "60%"
+            "mapType": "1",
+            "posTop": "64%",
+            "posLeft": "45%"
         }
     ],
     [
@@ -327,40 +364,45 @@
             "projectName": "吹奏楽部コンサート",
             "description": "吹奏楽部では、野球部の応援や定期演奏会など、様々なイベントに向けて練習をしています。今回も、工華祭に向けて練習をしたので、よかったら聴いていってください！",
             "imgPath": "./img/circleCut/cc9-1.jpg",
-            "posTop": "20%",
-            "posLeft": "15%"
+            "mapType": "2",
+            "posTop": "78%",
+            "posLeft": "56%"
         },
         {
             "groupName": "文芸部",
             "projectName": "【部誌頒布】ぼへみあん",
             "description": "文芸部の部誌です。部員一同心を込めて書いた短編集です。よろしくお願いします。",
             "imgPath": "./img/circleCut/cc9-2.jpg",
-            "posTop": "20%",
-            "posLeft": "30%"
+            "mapType": "2",
+            "posTop": "56%",
+            "posLeft": "18%"
         },
         {
             "groupName": "写真部",
             "projectName": "AI黎明期の写真展",
             "description": "我々が生きるは写真史激動の渦中。手元のスマホで誰でも高画質の写真が撮影できる。さらにはレンズを通すことなしに写真が生成できる。我々写真部は生き残ることができるのでしょうか。",
             "imgPath": "./img/circleCut/cc9-3.jpg",
-            "posTop": "20%",
-            "posLeft": "45%"
+            "mapType": "2",
+            "posTop": "79%",
+            "posLeft": "68%"
         },
         {
             "groupName": "美術部",
             "projectName": "帝国展覧会",
             "description": "美術部員の個人制作・共同制作を展示しています！<br />通りすがったついでにでも見てやってください。<br />お待ちしております！！",
             "imgPath": "./img/circleCut/cc9-4.jpg",
-            "posTop": "20%",
-            "posLeft": "60%"
+            "mapType": "0",
+            "posTop": "0%",
+            "posLeft": "0%"
         },
         {
             "groupName": "理科部",
             "projectName": "理科研究室",
             "description": "理科研究室では、化学班、電子工作班、生物班による科学の様々な高専ならではの体験ができます。ビスマス結晶、LEDCube、西湖の生態系など面白いことが沢山あります！<br />是非お越しください。",
             "imgPath": "./img/circleCut/cc9-5.jpg",
-            "posTop": "20%",
-            "posLeft": "20%"
+            "mapType": "1",
+            "posTop": "28%",
+            "posLeft": "45%"
         }
     ],
     [
@@ -370,40 +412,45 @@
             "projectName": "工華祭お茶会",
             "description": "おいしいお茶とお菓子を用意してお待ちしています！<br />ぜひお越しください！",
             "imgPath": "./img/circleCut/cc10-1.jpg",
-            "posTop": "20%",
-            "posLeft": "15%"
+            "mapType": "1",
+            "posTop": "55%",
+            "posLeft": "43%"
         },
         {
             "groupName": "SF研究部",
             "projectName": "ライブRPGおよび部誌頒布",
             "description": "No Description",
             "imgPath": "./img/circleCut/noImage.jpg",
-            "posTop": "20%",
-            "posLeft": "30%"
+            "mapType": "1",
+            "posTop": "26%",
+            "posLeft": "58%"
         },
         {
             "groupName": "電算部",
             "projectName": "群馬のパイオニア",
             "description": "電算部では、<br />・プロキシを利用したパケット改ざん体験<br />・Unityによるカードゲームの展示<br />・部誌『D言語』の頒布<br />を行います！<br />ぜひお越しください！",
             "imgPath": "./img/circleCut/cc10-3.jpg",
-            "posTop": "20%",
-            "posLeft": "45%"
+            "mapType": "0",
+            "posTop": "0%",
+            "posLeft": "0%"
         },
         {
             "groupName": "演劇部",
             "projectName": "Asagao 2days Theater",
             "description": "なんと、今年の演劇部は例年と違い、1作品をWキャストで上演します。つまり！2日間とも観にくると、2パターンの作品が楽しめちゃうんです！心から、みなさんのご来場をお待ちしております！",
             "imgPath": "./img/circleCut/cc10-4.jpg",
-            "posTop": "20%",
-            "posLeft": "60%"
+            "mapType": "2",
+            "posTop": "65%",
+            "posLeft": "76%"
         },
         {
             "groupName": "将棋部",
             "projectName": "将棋体験",
             "description": "No Description",
             "imgPath": "./img/circleCut/noImage.jpg",
-            "posTop": "20%",
-            "posLeft": "20%"
+            "mapType": "2",
+            "posTop": "23%",
+            "posLeft": "8%"
         }
     ],
     [
@@ -413,83 +460,93 @@
             "projectName": "自転車の展示",
             "description": "No Description",
             "imgPath": "./img/circleCut/noImage.jpg",
-            "posTop": "20%",
-            "posLeft": "15%"
+            "mapType": "1",
+            "posTop": "27%",
+            "posLeft": "34%"
         },
         {
             "groupName": "ダンス愛好会",
             "projectName": "ダンスの子～完璧で究極の高専生～",
             "description": "愉快で楽しいメンバーで楽しいステージをお届けします！参加自由なので、知ってる曲があってもなくても手拍子やコールなどで参加していただけると嬉しいです！<br />ぜひお越しください！！",
             "imgPath": "./img/circleCut/cc11-2.jpg",
-            "posTop": "20%",
-            "posLeft": "30%"
+            "mapType": "0",
+            "posTop": "0%",
+            "posLeft": "0%"
         },
         {
             "groupName": "ロボット研究会",
             "projectName": "たこ焼き",
             "description": "ロボ研は一つも関係ない。<br /><br />ただ、文化祭でたこ焼きを売りたいだけ。<br /><br />伝統ガン無視のたこ焼き屋。<br /><br />ご賞味あれ。",
             "imgPath": "./img/circleCut/cc11-3.jpg",
-            "posTop": "20%",
-            "posLeft": "45%"
+            "mapType": "1",
+            "posTop": "25%",
+            "posLeft": "41%"
         },
         {
             "groupName": "コンクリートカヌー愛好会",
             "projectName": "KOSEN FAST-FOOD SERVICE",
             "description": "ハンバーガーや飲み物などのファストフードをお手頃価格で提供します。素材にこだわって、本場の味を追求しました！",
             "imgPath": "./img/circleCut/cc11-4.jpg",
-            "posTop": "20%",
-            "posLeft": "60%"
+            "mapType": "1",
+            "posTop": "28%",
+            "posLeft": "70%"
         },
         {
             "groupName": "エコノパワー愛好会",
             "projectName": "エコノチキンサンド",
             "description": "どうもエコノパワー愛好会です。今年もチキンサンドを販売いたします。<br />２年に１度のこの機会、是非食べてみてください。",
             "imgPath": "./img/circleCut/cc11-5.jpg",
-            "posTop": "20%",
-            "posLeft": "20%"
+            "mapType": "1",
+            "posTop": "52%",
+            "posLeft": "36%"
         }
     ],
     [
         "愛好会②",
         {
-            "groupName": "構造デザイン愛好会",
+            "groupName": "構造デザイン研究会",
             "projectName": "豚汁専門店",
             "description": "No Description",
             "imgPath": "./img/circleCut/noImage.jpg",
-            "posTop": "20%",
-            "posLeft": "15%"
+            "mapType": "1",
+            "posTop": "22%",
+            "posLeft": "36%"
         },
         {
             "groupName": "3Dデザイン愛好会",
             "projectName": "THE SHOP 3D design",
             "description": "思いつくものはほぼ再現出来る3Dプリンターの展示と3Dプリンターで作成したキーホルダーを販売しています。高専に関する質問やその他色々受け付けています。お待ちしております！",
             "imgPath": "./img/circleCut/cc12-2.jpg",
-            "posTop": "20%",
-            "posLeft": "30%"
+            "mapType": "1",
+            "posTop": "21%",
+            "posLeft": "61%"
         },
         {
             "groupName": "クイズ研究会",
             "projectName": "クイズ落書きせんべい",
             "description": "クイ研「問題。クイズの体験と文化 祭を楽しくする飲食。 この二つを混 ぜ合わせたクイズ研究会ならではのらくがきせんべい、気になりますか?」<br />あなた (ボタンを押す) 「気になります。」<br />クイ研「正解です。ぜひお越しください。」",
             "imgPath": "./img/circleCut/cc12-3.jpg",
-            "posTop": "20%",
-            "posLeft": "45%"
+            "mapType": "1",
+            "posTop": "23%",
+            "posLeft": "47%"
         },
         {
             "groupName": "無線通信愛好会",
             "projectName": "コーヒー店",
             "description": "コヒーレンスってあるじゃないですか。ほら、コヒーレンス。<br />コーヒーメーカーを使わずにドリップ式で提供します。<br />コーヒー店へ是非ともお越しください。",
             "imgPath": "./img/circleCut/cc12-4.jpg",
-            "posTop": "20%",
-            "posLeft": "60%"
+            "mapType": "2",
+            "posTop": "35%",
+            "posLeft": "43%"
         },
         {
             "groupName": "ラグビー愛好会",
             "projectName": "ラグビー愛好会のチュロス",
             "description": "ラグビー愛好会はチュロスを販売しています。今年創設したばかりなので、たくさんの人に知っていただきたいです。ぜひチュロスを食べに来てください。ラグビー愛好会一同お待ちしています！",
             "imgPath": "./img/circleCut/cc12-5.jpg",
-            "posTop": "20%",
-            "posLeft": "20%"
+            "mapType": "1",
+            "posTop": "28%",
+            "posLeft": "42%"
         }
     ],
     [
@@ -499,32 +556,36 @@
             "projectName": "M工房～ウッドバーニング体験～",
             "description": "コルクボードに電熱ペンで絵を描くウッドバーニングの体験ができます。また，高専らしい？コースターの販売も行っています。記念におひとついかがですか。",
             "imgPath": "./img/circleCut/cc13-1.jpg",
-            "posTop": "20%",
-            "posLeft": "15%"
+            "mapType": "2",
+            "posTop": "55%",
+            "posLeft": "54%"
         },
         {
             "groupName": "有志②",
             "projectName": "ガチャガチャジャングル",
             "description": "ここは群馬高専の奥地&quot;ガチャガチャジャングル&quot;。<br />ここにはたくさんの動物たち(3Dプリンター産)が生息しているぞ！<br />動物以外のモノもあり、何が出るかはお楽しみ！！<br />ぜひ君の手で全種コンプリートを目指そう！！！",
             "imgPath": "./img/circleCut/cc13-2.jpg",
-            "posTop": "20%",
-            "posLeft": "30%"
+            "mapType": "2",
+            "posTop": "59%",
+            "posLeft": "54%"
         },
         {
             "groupName": "有志③",
             "projectName": "ミラクル★ライド",
             "description": "今年の工華祭は！高専ロボコンと別日です！てことで、搭乗型シューティングゲームを作りました。なんと弾は紙飛行機。さあ、ロボコンの世界に飛び込もう！",
             "imgPath": "./img/circleCut/cc13-3.jpg",
-            "posTop": "20%",
-            "posLeft": "45%"
+            "mapType": "2",
+            "posTop": "72%",
+            "posLeft": "47%"
         },
         {
             "groupName": "その他",
             "projectName": "入試広報ブース",
             "description": "群馬高専への入学を考えている小学生・中学生・高校生の皆さん、是非お立ち寄りください。本校教員へ質問・相談できる時間帯も設ける予定です。",
             "imgPath": "./img/circleCut/cc13-4.jpg",
-            "posTop": "20%",
-            "posLeft": "45%"
+            "mapType": "2",
+            "posTop": "51%",
+            "posLeft": "30%"
         }
     ]
 ]

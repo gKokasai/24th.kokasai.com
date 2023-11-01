@@ -42,8 +42,9 @@
 
 .mapObjectBox{
     position: absolute;
-    aspect-ratio: 1/1;
-    width: 10vh;
+    /*width: 5vh;*/
+    width: 12px;
+    line-height: 0rem;
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     /*background-color: rgba(127, 255, 212, 0.5);*/
@@ -53,6 +54,7 @@
     width: 100%;
     border: 2px solid black;
     border-radius: 0.2rem;
+    box-sizing: border-box;
     /*background-color: rgba(0, 255, 255, 0.3);*/
 }
 
