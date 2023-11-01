@@ -43,7 +43,7 @@
 .mapObjectBox {
     position: absolute;
     /*width: 5vh;*/
-    width: 12px;
+    width: 3.2%;
     line-height: 0rem;
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
@@ -53,7 +53,7 @@
 .mapObjectImage {
     width: 100%;
     border: 2px solid black;
-    border-radius: 0.2rem;
+    border-radius: 4px;
     box-sizing: border-box;
     /*background-color: rgba(0, 255, 255, 0.3);*/
 }

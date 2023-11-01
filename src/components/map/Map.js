@@ -45,10 +45,10 @@ function Map() {
   const mapWidth = 500; //画像によるので読み込めるようにする
   var mapSize = mapWidth;
   var isMouseDown = 0; //マウスが押されたか
-  const appearSize = 400; //アイコンの表示/非表示の境目のサイズ[px]
-  const zoomLimit = 1500; //ズームの限界
-  const focusSize = 1000; //フォーカスした際のマップの初期サイズ
-  var mapType = 2; //1:屋外マップ,2:屋内マップ
+  const appearSize = 1000; //アイコンの表示/非表示の境目のサイズ[px]
+  const zoomLimit = 3000; //ズームの限界
+  const focusSize = 1500; //フォーカスした際のマップの初期サイズ
+  var mapType = 1; //1:屋外マップ,2:屋内マップ
   const mapTypeName = ["屋外", "屋内"];
 
 
