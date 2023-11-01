@@ -45,11 +45,11 @@ function Map() {
   const mapWidth = 500; //画像によるので読み込めるようにする
   var mapSize = mapWidth;
   var isMouseDown = 0; //マウスが押されたか
-  const appearSize = 700; //アイコンの表示/非表示の境目のサイズ[px]
+  const appearSize = 400; //アイコンの表示/非表示の境目のサイズ[px]
   const zoomLimit = 1500; //ズームの限界
   const focusSize = 1000; //フォーカスした際のマップの初期サイズ
-  var mapType = 1; //1:屋外マップ,2:屋内マップ
-  const mapTypeName = ["屋外","屋内"];
+  var mapType = 2; //1:屋外マップ,2:屋内マップ
+  const mapTypeName = ["屋外", "屋内"];
 
 
   //1度だけ実行
@@ -59,6 +59,8 @@ function Map() {
 
     //クエリで指定されている場合、その企画をフォーカス
     if (isFocus == 1) {
+
+      mapType = projectData[grd][cls].mapType;
 
       mapSize = focusSize;
 
@@ -85,27 +87,39 @@ function Map() {
 
     }
 
-    //屋内マップと企画リストを隠す
-    let campusMap_2 = document.getElementById("campusMap_2");
-    campusMap_2.classList.add("invisible");
-    let mapProjectList_2 =document.getElementById("mapProjectList_2");
-    mapProjectList_2.style.display="none";
+    //表示しない方のマップと企画リストを隠す
+    if (mapType == 1) {
+      let campusMap_2 = document.getElementById("campusMap_2");
+      campusMap_2.classList.add("invisible");
+      let mapProjectList_2 = document.getElementById("mapProjectList_2");
+      mapProjectList_2.style.display = "none";
+    }
+    if (mapType == 2) {
+      let campusMap_1 = document.getElementById("campusMap_1");
+      campusMap_1.classList.add("invisible");
+      let mapProjectList_1 = document.getElementById("mapProjectList_1");
+      mapProjectList_1.style.display = "none";
+    }
 
     //マップの説明を変更する
-    let mapTypeDescription =document.getElementById("mapTypeDescription");
-    mapTypeDescription.innerText=mapTypeName[mapType-1]+"マップ";
+    let mapTypeDescription = document.getElementById("mapTypeDescription");
+    mapTypeDescription.innerText = mapTypeName[mapType - 1] + "マップ";
 
-    let mapProjectTitle =document.getElementById("mapProjectTitle");
-    mapProjectTitle.innerText=mapTypeName[mapType-1]+"企画一覧";
+    let mapProjectTitle = document.getElementById("mapProjectTitle");
+    mapProjectTitle.innerText = mapTypeName[mapType - 1] + "企画一覧";
 
-    let mapChangeButton =document.getElementById("mapChangeButton");
-    mapChangeButton.innerText=mapTypeName[2-mapType]+"マップに切り替え";
+    let mapChangeButton = document.getElementById("mapChangeButton");
+    mapChangeButton.innerText = mapTypeName[2 - mapType] + "マップに切り替え";
 
     //一定の拡大倍率になったら表示
     if (mapSize >= appearSize) {
       let mapObjectBox = document.getElementsByClassName("mapObjectBox");
+      let mapObjectImage = document.getElementsByClassName("mapObjectImage");
       for (let i = 0; i < mapObjectBox.length; i++) {
-        mapObjectBox[i].classList.remove("invisible");
+        const ab = mapObjectImage[i].id.split("-");
+        if (projectData[ab[0]][ab[1]].mapType == mapType) {
+          mapObjectBox[i].classList.remove("invisible");
+        }
       }
       let zoomDescription = document.getElementById("zoomDescription");
       zoomDescription.classList.add("invisible");
@@ -254,8 +268,12 @@ function Map() {
       //一定の拡大倍率になったら表示
       if (mapSize >= appearSize && mapSize - zoomRate < appearSize) {
         let mapObjectBox = document.getElementsByClassName("mapObjectBox");
+        let mapObjectImage = document.getElementsByClassName("mapObjectImage");
         for (let i = 0; i < mapObjectBox.length; i++) {
-          mapObjectBox[i].classList.remove("invisible");
+          const ab = mapObjectImage[i].id.split("-");
+          if (projectData[ab[0]][ab[1]].mapType == mapType) {
+            mapObjectBox[i].classList.remove("invisible");
+          }
         }
         let zoomDescription = document.getElementById("zoomDescription");
         zoomDescription.classList.add("invisible");
@@ -362,8 +380,12 @@ function Map() {
     //一定の拡大倍率になったら表示
     if (mapSize >= appearSize && mapSize - zoomRate < appearSize) {
       let mapObjectBox = document.getElementsByClassName("mapObjectBox");
+      let mapObjectImage = document.getElementsByClassName("mapObjectImage");
       for (let i = 0; i < mapObjectBox.length; i++) {
-        mapObjectBox[i].classList.remove("invisible");
+        const ab = mapObjectImage[i].id.split("-");
+        if (projectData[ab[0]][ab[1]].mapType == mapType) {
+          mapObjectBox[i].classList.remove("invisible");
+        }
       }
       let zoomDescription = document.getElementById("zoomDescription");
       zoomDescription.classList.add("invisible");
@@ -446,34 +468,34 @@ function Map() {
     //マップと企画リストを非表示にする
     let campusMap_1 = document.getElementById("campusMap_1");
     let campusMap_2 = document.getElementById("campusMap_2");
-    let mapProjectList_1 =document.getElementById("mapProjectList_1");
-    let mapProjectList_2 =document.getElementById("mapProjectList_2");
+    let mapProjectList_1 = document.getElementById("mapProjectList_1");
+    let mapProjectList_2 = document.getElementById("mapProjectList_2");
 
     if (mapType == 1) {
       campusMap_1.classList.remove("invisible");
       campusMap_2.classList.add("invisible");
 
-      mapProjectList_1.style.display="block";
-      mapProjectList_2.style.display="none";
+      mapProjectList_1.style.display = "block";
+      mapProjectList_2.style.display = "none";
     }
     if (mapType == 2) {
       campusMap_1.classList.add("invisible");
       campusMap_2.classList.remove("invisible");
 
-      mapProjectList_1.style.display="none";
-      mapProjectList_2.style.display="block";
+      mapProjectList_1.style.display = "none";
+      mapProjectList_2.style.display = "block";
     }
 
     //マップの説明を変更する
-    let mapTypeDescription =document.getElementById("mapTypeDescription");
-    mapTypeDescription.innerText=mapTypeName[mapType-1]+"マップ";
+    let mapTypeDescription = document.getElementById("mapTypeDescription");
+    mapTypeDescription.innerText = mapTypeName[mapType - 1] + "マップ";
 
-    let mapProjectTitle =document.getElementById("mapProjectTitle");
-    mapProjectTitle.innerText=mapTypeName[mapType-1]+"企画一覧";
+    let mapProjectTitle = document.getElementById("mapProjectTitle");
+    mapProjectTitle.innerText = mapTypeName[mapType - 1] + "企画一覧";
 
-    let mapChangeButton =document.getElementById("mapChangeButton");
-    mapChangeButton.innerText=mapTypeName[2-mapType]+"マップに切り替え";
-    
+    let mapChangeButton = document.getElementById("mapChangeButton");
+    mapChangeButton.innerText = mapTypeName[2 - mapType] + "マップに切り替え";
+
 
     //アイコンを非表示にする
     let mapObjectBox = document.getElementsByClassName("mapObjectBox");
