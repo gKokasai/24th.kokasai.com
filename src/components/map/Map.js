@@ -66,8 +66,8 @@ function Map() {
 
       //%を数字に変換
       let posNoPercent = {
-        x: projectData[grd][cls].posLeft.replace(/[^0-9]/g, ''),
-        y: projectData[grd][cls].posTop.replace(/[^0-9]/g, '')
+        x: projectData[grd][cls].posLeft.replace(/[^0-9.]/g, ''),
+        y: projectData[grd][cls].posTop.replace(/[^0-9.]/g, '')
       }
       let posNum = {
         x: Number(posNoPercent.x),
