@@ -11,6 +11,7 @@
 
 .accessContent {
     position: relative;
+    margin: 1rem 0rem;
     background-color: rgba(255, 255, 255, 0.5);
     backdrop-filter: blur(5px);
     border-radius: 1rem;
