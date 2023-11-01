@@ -67,6 +67,12 @@ function ProjectDetail() {
 
     const titleMark = document.getElementById("titleMark");
     setColor(titleMark, grd, cls);
+
+    if(projectData[grd][cls].mapType=="0"){
+      const toMapButton=document.getElementById("toMapButton");
+      toMapButton.classList.add("invisible");
+    }
+
   }, []);
 
   function setColor(target, grd, cls) {
@@ -281,6 +287,11 @@ function ProjectDetail() {
     window.location.assign(path);
   }
 
+  //マップページに移動
+  function toMapPage() {
+    window.location.assign(Pages.map.path + "?grd=" + grd + "&cls=" + cls);
+  }
+
   return (
     <>
       <img src={`${process.env.PUBLIC_URL}/img/backGround/space.jpg`} className="backGroundImage responsiveWidth" />
@@ -317,7 +328,7 @@ function ProjectDetail() {
 
           <div className="descriptionArea">
             <p id="description" className="description"></p>
-            <button className="toMapButton" onClick={() => { alert("近日公開予定です"); }}>&gt;&gt;マップで場所を確認</button>
+            <button id="toMapButton" className="toMapButton" onClick={toMapPage}>&gt;&gt;マップで場所を確認</button>
           </div>
           <br />
         </div>
