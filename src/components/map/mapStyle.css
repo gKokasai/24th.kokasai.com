@@ -1,41 +1,116 @@
-.mapCanvas{
+.ul_map {
+    list-style-type: decimal;
+}
+
+.mapCanvas {
     position: relative;
     width: 90%;
-    height: 40vh;
-    margin-left: auto;
-    margin-right: auto;
+    aspect-ratio: 1/1;
+    margin: 2rem auto;
     overflow: hidden;
-    background-color: rgba(184, 135, 11, 0.5);
+    /*background-color: rgba(184, 135, 11, 0.5);*/
+    border: 4px solid black;
 }
 
-.mapMovingBox{
+.mapMovingBox {
     position: absolute;
     width: 500px;
-    /*高さは子要素に応じて変わる*/
-    background-color: rgba(0, 0, 255, 0.5);
+    height: 500px;
+    /*background-color: rgba(0, 0, 255, 0.5);*/
 }
 
-.campusMap_1{
-    position: relative;
-    width: 100%;
-}
-
-.mapObjectBox{
+.mapBackImg {
     position: absolute;
-    aspect-ratio: 1/1;
-    width: 5rem;
+    width: 104%;
+    top: -4px;
+    left: -2%;
 }
 
-.mapObjectImage{
+.campusMap_1 {
+    position: absolute;
+    width: 135%;
+    top: 0%;
+    left: 0%;
+}
+
+.campusMap_2 {
+    position: absolute;
+    width: 110%;
+    top: 10%;
+    left: -4%;
+}
+
+.mapObjectBox {
+    position: absolute;
+    /*width: 5vh;*/
+    width: 3.2%;
+    line-height: 0rem;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    /*background-color: rgba(127, 255, 212, 0.5);*/
+}
+
+.mapObjectImage {
     width: 100%;
-    background-color: rgba(0, 255, 255, 0.3);
+    border: 2px solid black;
+    border-radius: 4px;
+    box-sizing: border-box;
+    /*background-color: rgba(0, 255, 255, 0.3);*/
 }
 
-.mapObjectText{
+.mapObjectText {
     position: relative;
     text-align: center;
     top: -1rem;
 
     text-shadow: 0px 1px 0 white, 1px 1px 0 white, 1px 0px 0 white, 1px -1px 0 white, 0px -1px 0 white, -1px -1px 0 white, -1px 0px 0 white, -1px 1px 0 white;
     font-size: 1rem;
+}
+
+.mapTypeDescription {
+    position: absolute;
+    text-align: center;
+    width: max-content;
+    top: 0rem;
+    left: 0rem;
+    padding: 0.5rem 0.5rem;
+    background-color: rgba(123, 218, 255, 0.5);
+    backdrop-filter: blur(5px);
+    font-size: 1.2rem;
+}
+
+.zoomDescription {
+    position: absolute;
+    text-align: center;
+    width: max-content;
+    bottom: 0rem;
+    right: 0rem;
+    padding: 0.5rem 0.5rem;
+    background-color: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(5px);
+    font-size: 0.8rem;
+}
+
+.mapProjectList {
+    position: relative;
+    margin: 1rem 0rem;
+    padding: 1rem 1rem;
+    line-height: 2rem;
+    font-size: 1.3rem;
+    background-color: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(5px);
+}
+
+.mapChangeButton {
+    position: relative;
+    margin: 0rem auto 2rem auto;
+    padding: 0.5rem 2rem;
+    width: max-content;
+    height: max-content;
+
+    border: 3px solid black;
+    border-radius: 0.5rem;
+    /*background-color: aquamarine;*/
+    background: linear-gradient(to right, rgb(232, 223, 119), rgb(166, 240, 113));
+    font-size: 1.2rem;
 }
