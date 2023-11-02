@@ -438,7 +438,6 @@ function Map() {
 
         let mapObjectImage = document.createElement("input");
         mapObjectImage.type = "image";
-        //mapObjectImage.src = `${process.env.PUBLIC_URL}/img/map/tipIcon.png`;
         mapObjectImage.src = projectData[i][j].imgPath;
         mapObjectImage.classList.add("mapObjectImage");
         mapObjectImage.onclick = toProjectDetail;
