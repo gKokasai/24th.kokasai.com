@@ -330,7 +330,7 @@
             "posLeft": "45.6%"
         },
         {
-            "groupName": "テニス部",
+            "groupName": "硬式テニス部",
             "projectName": "お好み焼き",
             "description": "硬式庭球部です。<br />気合いでやってます。<br />ロータリーで待ってます。",
             "imgPath": "./img/circleCut/cc8-2.jpg",
@@ -419,7 +419,7 @@
         {
             "groupName": "SF研究部",
             "projectName": "ライブRPGおよび部誌頒布",
-            "description": "No Description",
+            "description": "お客様参加型の劇「ライブRPG」を両日とも午後1時より行います！<br />みなさんの選択で結末が変わりますので、奮ってご参加下さい！",
             "imgPath": "./img/circleCut/cc10-2.jpg",
             "mapType": "1",
             "posTop": "26.6%",
