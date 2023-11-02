@@ -332,8 +332,8 @@
         {
             "groupName": "テニス部",
             "projectName": "お好み焼き",
-            "description": "No Description",
-            "imgPath": "./img/circleCut/noImage.jpg",
+            "description": "硬式庭球部です。<br />気合いでやってます。<br />ロータリーで待ってます。",
+            "imgPath": "./img/circleCut/cc8-2.jpg",
             "mapType": "1",
             "posTop": "20.2%",
             "posLeft": "64.5%"
