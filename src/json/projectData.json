@@ -391,9 +391,9 @@
             "projectName": "帝国展覧会",
             "description": "美術部員の個人制作・共同制作を展示しています！<br />通りすがったついでにでも見てやってください。<br />お待ちしております！！",
             "imgPath": "./img/circleCut/cc9-4.jpg",
-            "mapType": "0",
-            "posTop": "0%",
-            "posLeft": "0%"
+            "mapType": "2",
+            "posTop": "32.1%",
+            "posLeft": "81.1%"
         },
         {
             "groupName": "理科部",
@@ -430,9 +430,9 @@
             "projectName": "群馬のパイオニア",
             "description": "電算部では、<br />・プロキシを利用したパケット改ざん体験<br />・Unityによるカードゲームの展示<br />・部誌『D言語』の頒布<br />を行います！<br />ぜひお越しください！",
             "imgPath": "./img/circleCut/cc10-3.jpg",
-            "mapType": "0",
-            "posTop": "0%",
-            "posLeft": "0%"
+            "mapType": "2",
+            "posTop": "38.0%",
+            "posLeft": "81.1%"
         },
         {
             "groupName": "演劇部",
