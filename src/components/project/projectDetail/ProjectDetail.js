@@ -28,10 +28,12 @@ function ProjectDetail() {
 
   var uid = "";
   var isSignedIn = false;
+  var isVoteAvailable = false;
 
 
   var clickNikeDate = Date.now();
   const cooltime = 1000; //いいねのクールタイム[ms]
+  const allowVoteTime=300000; //アカウントから投票できるようになるまでのクールタイム[ms](5分)
 
   //クエリを取得
   const quely = new URLSearchParams(useLocation().search);
@@ -68,8 +70,8 @@ function ProjectDetail() {
     const titleMark = document.getElementById("titleMark");
     setColor(titleMark, grd, cls);
 
-    if(projectData[grd][cls].mapType=="0"){
-      const toMapButton=document.getElementById("toMapButton");
+    if (projectData[grd][cls].mapType == "0") {
+      const toMapButton = document.getElementById("toMapButton");
       toMapButton.classList.add("invisible");
     }
 
@@ -167,7 +169,18 @@ function ProjectDetail() {
       // User is signed in, see docs for a list of available properties
       // https://firebase.google.com/docs/reference/js/v8/firebase.User
       uid = user.uid;
-      console.log(uid);
+      //console.log(uid);
+
+      const creationTime = user.metadata.creationTime;
+      const creationTimeNum=new Date(creationTime).getTime();
+      const nowDate = Date.now();
+      const deltaCreationTime=nowDate-creationTimeNum;
+      console.log(deltaCreationTime);
+      //アカウント作成から今までの時間がallowVoteTimeのクールタイムを超えたら
+      if(deltaCreationTime>allowVoteTime){
+        isVoteAvailable=true;
+      }
+
     } else {
       // User is signed out
       console.log("signed out");
@@ -244,9 +257,10 @@ function ProjectDetail() {
       niceButton.classList.remove("invisible");
       niceImage.style.opacity = 50 + "%";
       setTimeout(() => {
-        niceImage.style.opacity = 100 + "%";
+        if (isVoteAvailable) {
+          niceImage.style.opacity = 100 + "%";
+        }
       }, cooltime);
-
       let numberOfLikes = document.getElementById("numberOfLikes");
       numberOfLikes.innerText = querySnapshot.docs.length;
 
@@ -256,24 +270,28 @@ function ProjectDetail() {
 
 
   function clickNice() {
-    let nowDate = Date.now();
-    let elapsedTime = nowDate - clickNikeDate;
-    if (elapsedTime > cooltime) {
-      let niceButton = document.getElementById("niceButton");
-      if (niceButton.checked) {
-        setNice(grd + "-" + cls);
+
+    if (isVoteAvailable) {
+      let nowDate = Date.now();
+      let elapsedTime = nowDate - clickNikeDate;
+      if (elapsedTime > cooltime) {
+        let niceButton = document.getElementById("niceButton");
+        if (niceButton.checked) {
+          setNice(grd + "-" + cls);
+        }
+        else {
+          unsetNice(grd + "-" + cls);
+        }
+
+        clickNikeDate = nowDate;
       }
       else {
-        unsetNice(grd + "-" + cls);
+        //alert入れるとボタン効かなくなる
+        //let elapsedTime_s = elapsedTime / 1000;
+        //alert("クールタイム中\n" + elapsedTime_s.toFixed(1) + "秒待ってください");
       }
+    }
 
-      clickNikeDate = nowDate;
-    }
-    else {
-      //alert入れるとボタン効かなくなる
-      //let elapsedTime_s = elapsedTime / 1000;
-      //alert("クールタイム中\n" + elapsedTime_s.toFixed(1) + "秒待ってください");
-    }
   }
 
 
@@ -330,7 +348,18 @@ function ProjectDetail() {
             <p id="description" className="description"></p>
             <button id="toMapButton" className="toMapButton" onClick={toMapPage}>&gt;&gt;マップで場所を確認</button>
           </div>
+
+          <div className="cautionArea">
+            <p className="heading3">いいね機能について</p>
+            <ul className="projectDetail_ul">
+              <li><p>サークルカットの下にあるハートのボタンを押すことで、その企画にいいねをすることができます。</p></li>
+              <li><p>工華祭終了時の、各企画のいいねの数によってランキングが決定します。ふるって投票にご参加ください。</p></li>
+            </ul>
+            <p>※投票のためのユーザー情報はブラウザごとに保存されます。不正を防ぐため、初回の登録時から5分間はいいねをすることが出来ませんのでご承知おきください。5分経っても投票ができない場合は、ページを再読み込みしてください。</p>
+          </div>
+
           <br />
+
         </div>
 
       </div>
