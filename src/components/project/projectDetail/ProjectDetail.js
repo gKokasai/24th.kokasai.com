@@ -33,7 +33,7 @@ function ProjectDetail() {
 
   var clickNikeDate = Date.now();
   const cooltime = 1000; //いいねのクールタイム[ms]
-  const allowVoteTime=300000; //アカウントから投票できるようになるまでのクールタイム[ms](5分)
+  const allowVoteTime = 300000; //アカウントから投票できるようになるまでのクールタイム[ms](5分)
 
   //クエリを取得
   const quely = new URLSearchParams(useLocation().search);
@@ -172,13 +172,13 @@ function ProjectDetail() {
       //console.log(uid);
 
       const creationTime = user.metadata.creationTime;
-      const creationTimeNum=new Date(creationTime).getTime();
+      const creationTimeNum = new Date(creationTime).getTime();
       const nowDate = Date.now();
-      const deltaCreationTime=nowDate-creationTimeNum;
+      const deltaCreationTime = nowDate - creationTimeNum;
       console.log(deltaCreationTime);
       //アカウント作成から今までの時間がallowVoteTimeのクールタイムを超えたら
-      if(deltaCreationTime>allowVoteTime){
-        isVoteAvailable=true;
+      if (deltaCreationTime > allowVoteTime) {
+        isVoteAvailable = true;
       }
 
     } else {
