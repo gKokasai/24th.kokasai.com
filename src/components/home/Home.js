@@ -54,7 +54,7 @@ function Home() {
 
           <p className="heading3">注意事項</p>
           <ul className="ul_home">
-            <li className="li_home"><spam className="heading4">【重要】</spam>交通の混乱を避けるため、大駐車場前の道路は<spam className="heading4">右折禁止</spam>とさせていただきます。関越自動車道を利用して乗用車で来場される方は特にご注意ください。</li>
+            <li className="li_home"><spam className="heading4">【重要】</spam>交通の混乱を避けるため、大駐車場入口前の道路は<spam className="heading4">右折禁止</spam>とさせていただきます。関越自動車道を利用して乗用車で来場される方は特にご注意ください。</li>
             <li className="li_home">マップに色で示された場所以外および工事場所への立ち入りは禁止されています。</li>
             <li className="li_home">ゴミは構内に設置されたゴミ箱に捨ててください<br />また、燃えるゴミ・燃えないゴミ・ペットボトルの分別にご協力ください。</li>
             <li className="li_home">構内は全面禁酒・禁煙となっております<br />酒類の持ち込みはご遠慮ください。</li>
