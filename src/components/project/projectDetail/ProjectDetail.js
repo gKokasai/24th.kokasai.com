@@ -33,7 +33,8 @@ function ProjectDetail() {
 
   var clickNikeDate = Date.now();
   const cooltime = 1000; //いいねのクールタイム[ms]
-  const allowVoteTime = 300000; //アカウントから投票できるようになるまでのクールタイム[ms](5分)
+  const allowVoteTime = 0; //アカウントから投票できるようになるまでのクールタイム[ms]
+  //const allowVoteTime = 300000; //5分
 
   //クエリを取得
   const quely = new URLSearchParams(useLocation().search);
@@ -180,12 +181,16 @@ function ProjectDetail() {
       if (deltaCreationTime > allowVoteTime) {
         isVoteAvailable = true;
       }
+      console.log(isVoteAvailable);
 
     } else {
       // User is signed out
       console.log("signed out");
       // ...
     }
+    
+    //投票データを取得
+    recieveVoteData();
   });
 
 
@@ -257,6 +262,7 @@ function ProjectDetail() {
       niceButton.classList.remove("invisible");
       niceImage.style.opacity = 50 + "%";
       setTimeout(() => {
+        console.log(isVoteAvailable);
         if (isVoteAvailable) {
           niceImage.style.opacity = 100 + "%";
         }
@@ -295,9 +301,6 @@ function ProjectDetail() {
   }
 
 
-  //投票データを取得
-
-  recieveVoteData();
 
   //企画一覧にもどる
   function backToProjectPage() {
@@ -309,6 +312,8 @@ function ProjectDetail() {
   function toMapPage() {
     window.location.assign(Pages.map.path + "?grd=" + grd + "&cls=" + cls);
   }
+
+  //<p>※投票のためのユーザー情報はブラウザごとに保存されます。不正を防ぐため、初回の登録時から5分間はいいねをすることが出来ませんのでご承知おきください。5分経っても投票ができない場合は、ページを再読み込みしてください。</p>
 
   return (
     <>
@@ -355,7 +360,6 @@ function ProjectDetail() {
               <li><p>サークルカットの下にあるハートのボタンを押すことで、その企画にいいねをすることができます。</p></li>
               <li><p>工華祭終了時の、各企画のいいねの数によってランキングが決定します。ふるって投票にご参加ください。</p></li>
             </ul>
-            <p>※投票のためのユーザー情報はブラウザごとに保存されます。不正を防ぐため、初回の登録時から5分間はいいねをすることが出来ませんのでご承知おきください。5分経っても投票ができない場合は、ページを再読み込みしてください。</p>
           </div>
 
           <br />
