@@ -22,6 +22,8 @@ function Home() {
     }
   }, []);
 
+  //<li className="li_home"><p>企画のいいね機能は、はじめに企画ページを表示してから5分間は投票出来ないようになっています（それ以降は待ち時間なしで投票できるようになります）。ご承知おきください。</p></li>
+
   return (
     <>
       <div className="backGroundImage responsiveWidth">
@@ -39,6 +41,17 @@ function Home() {
       <div className="contents contents_whitesmoke">
         <div className="contents_innerBlock">
           <br />
+
+          <p className="heading2">アナウンス</p>
+
+          <div className="announceContents">
+            <ul className="ul_home">
+              <li className="li_home"><p>交通の混乱を避けるため、大駐車場入口前の道路は<spam className="heading4">右折禁止</spam>とさせていただきます。関越自動車道を利用して乗用車で来場される方は特にご注意ください。</p></li>
+              <li className="li_home"><p>各企画の人気投票を行っています。各企画の紹介ページにあるハートをタップすることで票を入れることができます。ぜひご参加ください。</p></li>
+              <li className="li_home"><p>各企画に加えて各バンドの投票も行っています。バンドの投票はステージ企画のページをご覧ください。</p></li>
+            </ul>
+          </div>
+
           <p className="heading2">詳細情報</p>
           <p className="heading3">開催日時</p>
           <p>11月4日(土) 9:30～16:30<br />
@@ -54,7 +67,6 @@ function Home() {
 
           <p className="heading3">注意事項</p>
           <ul className="ul_home">
-            <li className="li_home"><spam className="heading4">【重要】</spam>交通の混乱を避けるため、大駐車場入口前の道路は<spam className="heading4">右折禁止</spam>とさせていただきます。関越自動車道を利用して乗用車で来場される方は特にご注意ください。</li>
             <li className="li_home">マップに色で示された場所以外および工事場所への立ち入りは禁止されています。</li>
             <li className="li_home">ゴミは構内に設置されたゴミ箱に捨ててください<br />また、燃えるゴミ・燃えないゴミ・ペットボトルの分別にご協力ください。</li>
             <li className="li_home">構内は全面禁酒・禁煙となっております<br />酒類の持ち込みはご遠慮ください。</li>

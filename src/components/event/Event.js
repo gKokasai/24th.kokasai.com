@@ -267,6 +267,15 @@ function Event() {
             ※公演時間は予告なしに前後する可能性があります
           </p>
 
+          <div className="eventDescription2">
+            <p>バンドの投票はformsにて行っています！</p>
+            
+            <p><a href="https://forms.office.com/Pages/ResponsePage.aspx?id=XYP-cpVeEkWK4KezivJfyMJ6Hgx9Ge1EhXgWktdkJWRURTMwRUxXSUxGS00ySUFGR0pCRDFSOFlMVy4u" target="_blank" rel="noreferrer noopener">&gt;&gt;1日目投票</a></p>
+            <p><a href="https://forms.office.com/Pages/ResponsePage.aspx?id=XYP-cpVeEkWK4KezivJfyMJ6Hgx9Ge1EhXgWktdkJWRUQkVKU1dCVzlTVUlHREJXRThIREo2MVc1VC4u" target="_blank" rel="noreferrer noopener">&gt;&gt;2日目投票</a></p>
+
+            <p>企画の投票は各企画ページをご覧ください！</p>
+          </div>
+
           <p className="heading2">タイムスケジュール</p>
 
           <input id="dayButton" className="dayButton" type="checkbox" onClick={clickDayButton} />
