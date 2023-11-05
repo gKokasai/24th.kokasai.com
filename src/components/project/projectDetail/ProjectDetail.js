@@ -179,9 +179,9 @@ function ProjectDetail() {
       console.log(deltaCreationTime);
       //アカウント作成から今までの時間がallowVoteTimeのクールタイムを超えたら
       if (deltaCreationTime > allowVoteTime) {
-        isVoteAvailable = true;
+        //isVoteAvailable = true;
       }
-      console.log(isVoteAvailable);
+      //console.log(isVoteAvailable);
 
     } else {
       // User is signed out
@@ -262,7 +262,7 @@ function ProjectDetail() {
       niceButton.classList.remove("invisible");
       niceImage.style.opacity = 50 + "%";
       setTimeout(() => {
-        console.log(isVoteAvailable);
+        //console.log(isVoteAvailable);
         if (isVoteAvailable) {
           niceImage.style.opacity = 100 + "%";
         }
