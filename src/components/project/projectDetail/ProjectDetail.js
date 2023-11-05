@@ -33,7 +33,7 @@ function ProjectDetail() {
 
   var clickNikeDate = Date.now();
   const cooltime = 1000; //いいねのクールタイム[ms]
-  const allowVoteTime = 0; //アカウントから投票できるようになるまでのクールタイム[ms]
+  const allowVoteTime = 30000; //アカウントから投票できるようになるまでのクールタイム[ms]
   //const allowVoteTime = 300000; //5分
 
   //クエリを取得
