@@ -115,10 +115,10 @@ function Event() {
       if (i == 0) continue;
       let TSContent = document.createElement("div");
       TSContent.className = "TSContent";
-      if(eventData[day][i].projectType == "バンド")TSContent.style.backgroundColor="#69B5D1BF";//1DFDCB7F,13F3BF3F
-      if(eventData[day][i].projectType == "ダンス愛好会")TSContent.style.backgroundColor="#D169B5BF";//6EFF977F,FD1D9A7F
-      if(eventData[day][i].projectType == "有志ダンス")TSContent.style.backgroundColor="#D169B5BF";
-      if(eventData[day][i].projectType == "コスプレコンテスト")TSContent.style.backgroundColor="#B5D169BF";//1DFD357F
+      if (eventData[day][i].projectType == "バンド") TSContent.style.backgroundColor = "#69B5D1BF";//1DFDCB7F,13F3BF3F
+      if (eventData[day][i].projectType == "ダンス愛好会") TSContent.style.backgroundColor = "#D169B5BF";//6EFF977F,FD1D9A7F
+      if (eventData[day][i].projectType == "有志ダンス") TSContent.style.backgroundColor = "#D169B5BF";
+      if (eventData[day][i].projectType == "コスプレコンテスト") TSContent.style.backgroundColor = "#B5D169BF";//1DFD357F
       if (day == 1) {
         TSContent.style.animationDelay = (i * 100) + "ms";
         TSContent.style.animationName = "TSContent_fadeIn";
@@ -255,6 +255,16 @@ function Event() {
 
   }
 
+  /*
+  <div className="eventDescription2">
+    <p>バンドの投票はformsにて行っています！</p>
+
+    <p><a href="https://forms.office.com/Pages/ResponsePage.aspx?id=XYP-cpVeEkWK4KezivJfyMJ6Hgx9Ge1EhXgWktdkJWRURTMwRUxXSUxGS00ySUFGR0pCRDFSOFlMVy4u" target="_blank" rel="noreferrer noopener">&gt;&gt;1日目投票</a></p>
+    <p><a href="https://forms.office.com/Pages/ResponsePage.aspx?id=XYP-cpVeEkWK4KezivJfyMJ6Hgx9Ge1EhXgWktdkJWRUQkVKU1dCVzlTVUlHREJXRThIREo2MVc1VC4u" target="_blank" rel="noreferrer noopener">&gt;&gt;2日目投票</a></p>
+
+    <p>企画の投票は各企画ページをご覧ください！</p>
+  </div>
+  */
 
   return (
     <>
@@ -267,14 +277,6 @@ function Event() {
             ※公演時間は予告なしに前後する可能性があります
           </p>
 
-          <div className="eventDescription2">
-            <p>バンドの投票はformsにて行っています！</p>
-            
-            <p><a href="https://forms.office.com/Pages/ResponsePage.aspx?id=XYP-cpVeEkWK4KezivJfyMJ6Hgx9Ge1EhXgWktdkJWRURTMwRUxXSUxGS00ySUFGR0pCRDFSOFlMVy4u" target="_blank" rel="noreferrer noopener">&gt;&gt;1日目投票</a></p>
-            <p><a href="https://forms.office.com/Pages/ResponsePage.aspx?id=XYP-cpVeEkWK4KezivJfyMJ6Hgx9Ge1EhXgWktdkJWRUQkVKU1dCVzlTVUlHREJXRThIREo2MVc1VC4u" target="_blank" rel="noreferrer noopener">&gt;&gt;2日目投票</a></p>
-
-            <p>企画の投票は各企画ページをご覧ください！</p>
-          </div>
 
           <p className="heading2">タイムスケジュール</p>
 

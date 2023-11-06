@@ -22,7 +22,13 @@ function Home() {
     }
   }, []);
 
-  //<li className="li_home"><p>企画のいいね機能は、はじめに企画ページを表示してから5分間は投票出来ないようになっています（それ以降は待ち時間なしで投票できるようになります）。ご承知おきください。</p></li>
+  //旧アナウンス内容
+  /*
+  <li className="li_home"><p>企画のいいね機能は、はじめに企画ページを表示してから5分間は投票出来ないようになっています（それ以降は待ち時間なしで投票できるようになります）。ご承知おきください。</p></li>
+  <li className="li_home"><p>交通の混乱を避けるため、大駐車場入口前の道路は<spam className="heading4">右折禁止</spam>とさせていただきます。関越自動車道を利用して乗用車で来場される方は特にご注意ください。</p></li>
+  <li className="li_home"><p>各企画の人気投票を行っています。各企画の紹介ページにあるハートをタップすることで票を入れることができます。ぜひご参加ください。</p></li>
+  <li className="li_home"><p>各企画に加えて各バンドの投票も行っています。バンドの投票はステージ企画のページをご覧ください。</p></li>
+  */
 
   return (
     <>
@@ -46,9 +52,8 @@ function Home() {
 
           <div className="announceContents">
             <ul className="ul_home">
-              <li className="li_home"><p>交通の混乱を避けるため、大駐車場入口前の道路は<spam className="heading4">右折禁止</spam>とさせていただきます。関越自動車道を利用して乗用車で来場される方は特にご注意ください。</p></li>
-              <li className="li_home"><p>各企画の人気投票を行っています。各企画の紹介ページにあるハートをタップすることで票を入れることができます。ぜひご参加ください。</p></li>
-              <li className="li_home"><p>各企画に加えて各バンドの投票も行っています。バンドの投票はステージ企画のページをご覧ください。</p></li>
+              <p className="announce_conclude">第24回工華祭は終了しました。</p>
+              <p className="announce_conclude">次回もお楽しみに！</p>
             </ul>
           </div>
 

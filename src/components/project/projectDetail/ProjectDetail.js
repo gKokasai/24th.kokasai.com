@@ -181,7 +181,6 @@ function ProjectDetail() {
       if (deltaCreationTime > allowVoteTime) {
         //isVoteAvailable = true;
       }
-      //console.log(isVoteAvailable);
 
     } else {
       // User is signed out
@@ -262,7 +261,6 @@ function ProjectDetail() {
       niceButton.classList.remove("invisible");
       niceImage.style.opacity = 50 + "%";
       setTimeout(() => {
-        //console.log(isVoteAvailable);
         if (isVoteAvailable) {
           niceImage.style.opacity = 100 + "%";
         }
@@ -357,8 +355,9 @@ function ProjectDetail() {
           <div className="cautionArea">
             <p className="heading3">いいね機能について</p>
             <ul className="projectDetail_ul">
-              <li><p>サークルカットの下にあるハートのボタンを押すことで、その企画にいいねをすることができます。</p></li>
-              <li><p>工華祭終了時の、各企画のいいねの数によってランキングが決定します。ふるって投票にご参加ください。</p></li>
+              <li><p className="lineThrough">サークルカットの下にあるハートのボタンを押すことで、その企画にいいねをすることができます。</p></li>
+              <li><p className="lineThrough">工華祭終了時の、各企画のいいねの数によってランキングが決定します。ふるって投票にご参加ください。</p></li>
+              <p>投票は終了しました。</p>
             </ul>
           </div>
 

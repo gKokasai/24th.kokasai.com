@@ -272,3 +272,11 @@
     border: dashed 2px rgb(255, 123, 0);
     border-radius: 8px;
 }
+
+.inquiryLink{
+    pointer-events: none;
+}
+
+.announce_conclude{
+    text-align: center;
+}
