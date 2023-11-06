@@ -23,13 +23,14 @@ npm start
 ```shell
 npm build
 ```
+### gh-pages
 
 #### gh-pagesの導入
 ```shell
 npm install gh-pages --save-dev
 ```
 
-package.jsonを以下のように変更
+#### package.jsonを以下のように変更
 ```shell
 {
   ...,
